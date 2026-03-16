@@ -12,7 +12,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **OPIN-01**: Enumerate the top 50 TypeScript "multiple ways to do it" ambiguities and gotchas as the canonical opinion list
 - [ ] **OPIN-02**: Each opinion has a clear stance, rationale ("because X"), and severity tier (bug prevention > maintenance > style)
 - [ ] **OPIN-03**: Each opinion is tagged as skill-only, lint-enforceable, or both
-- [ ] **OPIN-04**: Opinion count capped at a manageable scope (15-25 core opinions for v1, expandable)
+- [ ] **OPIN-04**: Up to 50 opinions for v1 if the enumeration surfaces enough that warrant attention; no artificial cap
 
 ### Claude Skill — Table Stakes Opinions
 
@@ -100,13 +100,48 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| (populated by roadmapper) | | |
+| OPIN-01 | Phase 1 | Pending |
+| OPIN-02 | Phase 1 | Pending |
+| OPIN-03 | Phase 1 | Pending |
+| OPIN-04 | Phase 1 | Pending |
+| SKIL-01 | Phase 2 | Pending |
+| SKIL-02 | Phase 2 | Pending |
+| SKIL-03 | Phase 2 | Pending |
+| SKIL-04 | Phase 2 | Pending |
+| SKIL-05 | Phase 2 | Pending |
+| SKIL-06 | Phase 2 | Pending |
+| SKIL-07 | Phase 2 | Pending |
+| SKIL-08 | Phase 2 | Pending |
+| SKIL-09 | Phase 2 | Pending |
+| SKIL-10 | Phase 2 | Pending |
+| SKIL-11 | Phase 2 | Pending |
+| SKIL-12 | Phase 2 | Pending |
+| SKIL-13 | Phase 2 | Pending |
+| SKIL-14 | Phase 2 | Pending |
+| SKIL-15 | Phase 2 | Pending |
+| SKIL-16 | Phase 2 | Pending |
+| SKIL-17 | Phase 2 | Pending |
+| SKIL-18 | Phase 2 | Pending |
+| SKIL-19 | Phase 2 | Pending |
+| SKIL-20 | Phase 2 | Pending |
+| SKIL-21 | Phase 2 | Pending |
+| LINT-01 | Phase 3 | Pending |
+| LINT-02 | Phase 3 | Pending |
+| LINT-03 | Phase 3 | Pending |
+| LINT-04 | Phase 3 | Pending |
+| LINT-05 | Phase 3 | Pending |
+| LINT-06 | Phase 4 | Pending |
+| LINT-07 | Phase 4 | Pending |
+| LINT-08 | Phase 4 | Pending |
+| COVR-01 | Phase 5 | Pending |
+| COVR-02 | Phase 5 | Pending |
+| COVR-03 | Phase 5 | Pending |
 
 **Coverage:**
-- v1 requirements: 28 total
-- Mapped to phases: 0
-- Unmapped: 28 ⚠️
+- v1 requirements: 36 total
+- Mapped to phases: 36
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-16*
-*Last updated: 2026-03-16 after initial definition*
+*Last updated: 2026-03-16 after roadmap creation*
