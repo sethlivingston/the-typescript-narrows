@@ -1,0 +1,38 @@
+---
+id: single-discriminant
+title: Use a single type or kind field as discriminant
+severity: maintenance
+enforcement: both
+confidence: moderate
+tags: [discriminated-unions, patterns]
+related: [exhaustive-discrimination, no-destructure-before-narrow, exhaustive-switch]
+lint:
+  type: custom
+---
+
+## Stance
+
+Use a single string literal field named `type` (or `kind` in AST contexts) as the discriminant for union types. Do not use multiple fields or boolean combinations.
+
+## Why
+
+A single discriminant field enables TypeScript's built-in narrowing via `switch` and `if` checks. Multiple discriminant fields require complex intersection checks that the compiler cannot narrow automatically. A single `type` field also makes the union self-documenting -- you can read the variants at a glance.
+
+## Do
+
+```typescript
+type Shape =
+  | { type: "circle"; radius: number }
+  | { type: "rect"; width: number; height: number };
+```
+
+## Don't
+
+```typescript
+type Shape = {
+  isCircle: boolean;
+  radius?: number;
+  width?: number;
+  height?: number;
+};
+```
