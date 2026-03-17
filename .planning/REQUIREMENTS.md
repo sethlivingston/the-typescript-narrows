@@ -60,9 +60,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Coverage Validation
 
-- [ ] **COVR-01**: All 50 enumerated TS ambiguities/gotchas from OPIN-01 are addressed by either the skill, a lint rule, or both
-- [ ] **COVR-02**: Each item in the 50-item list has a traceability entry showing which artifact(s) address it
-- [ ] **COVR-03**: Lint rules only exist where static analysis makes sense — no forced automation of guidance-only opinions
+- [x] **COVR-01**: All 50 enumerated TS ambiguities/gotchas from OPIN-01 are addressed by either the skill, a lint rule, or both
+- [x] **COVR-02**: Each item in the 50-item list has a traceability entry showing which artifact(s) address it
+- [x] **COVR-03**: Lint rules only exist where static analysis makes sense — no forced automation of guidance-only opinions
 
 ## v2 Requirements
 
@@ -133,9 +133,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | LINT-06 | Phase 4 | Complete |
 | LINT-07 | Phase 4 | Complete |
 | LINT-08 | Phase 4 | Complete |
-| COVR-01 | Phase 5 | Pending |
-| COVR-02 | Phase 5 | Pending |
-| COVR-03 | Phase 5 | Pending |
+| COVR-01 | Phase 5 | Complete |
+| COVR-02 | Phase 5 | Complete |
+| COVR-03 | Phase 5 | Complete |
 
 **Coverage:**
 - v1 requirements: 36 total
