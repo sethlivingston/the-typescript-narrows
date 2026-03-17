@@ -1,6 +1,6 @@
 # Opinion Index
 
-50 opinions organized by topic. Each links to its opinion file. Severity and enforcement shown per opinion.
+56 opinions organized by topic. Each links to its opinion file. Severity and enforcement shown per opinion.
 
 Severity: B = bug-prevention, M = maintenance, S = style | Enforcement: both, skill-only
 
@@ -21,6 +21,7 @@ Severity: B = bug-prevention, M = maintenance, S = style | Enforcement: both, sk
 - [no-namespace](no-namespace.md) -- Do not use TypeScript namespaces [M] [both]
 - [consistent-type-imports](consistent-type-imports.md) -- Use `import type` for type-only imports [S] [both]
 - [no-const-enum](no-const-enum.md) -- Never use `const enum` [B] [both]
+- [explicit-return-types](explicit-return-types.md) -- Require explicit return types on exported functions [M] [both]
 
 ## Null Handling & Narrowing
 
@@ -30,6 +31,7 @@ Severity: B = bug-prevention, M = maintenance, S = style | Enforcement: both, sk
 - [prefer-nullish-coalescing](prefer-nullish-coalescing.md) -- Use `??` instead of `||` for nullish fallbacks [B] [both]
 - [use-type-narrowing](use-type-narrowing.md) -- Narrow types with guards instead of assertions [B] [skill-only]
 - [strict-null-checks](strict-null-checks.md) -- Enable `strictNullChecks` (never disable) [B] [skill-only]
+- [prefer-undefined](prefer-undefined.md) -- Prefer `undefined` over `null` [S] [skill-only]
 
 ## Async & Promises
 
@@ -39,12 +41,25 @@ Severity: B = bug-prevention, M = maintenance, S = style | Enforcement: both, sk
 - [return-await](return-await.md) -- Always `return await` in try/catch blocks [B] [both]
 - [prefer-async-await](prefer-async-await.md) -- Use async/await over `.then()` chains [M] [skill-only]
 
+## Iteration and Transforms
+
+- [prefer-for-of](prefer-for-of.md) -- Use `for...of` over `.forEach` [M] [skill-only]
+- [no-reduce](no-reduce.md) -- Ban `.reduce` entirely [M] [skill-only]
+
 ## Error Handling
 
 - [typed-errors](typed-errors.md) -- Throw only Error subclasses, never primitives [B] [both]
 - [result-over-throw](result-over-throw.md) -- Prefer Result types for expected failures, throw for bugs [M] [skill-only]
 - [error-discrimination](error-discrimination.md) -- Use discriminated union errors, not string messages [M] [skill-only]
 - [no-empty-catch](no-empty-catch.md) -- Do not silently swallow errors with empty catch blocks [B] [both]
+
+## Control Flow
+
+- [prefer-early-return](prefer-early-return.md) -- Fail fast with early returns [M] [skill-only]
+
+## Functions
+
+- [prefer-arrow-functions](prefer-arrow-functions.md) -- Use arrow functions by default [S] [skill-only]
 
 ## Immutability & Const
 
@@ -95,6 +110,6 @@ Severity: B = bug-prevention, M = maintenance, S = style | Enforcement: both, sk
 
 ## Summary
 
-- **Total opinions:** 50
-- **Bug prevention:** 24 | **Maintenance:** 19 | **Style:** 7
-- **Both (skill + lint):** 36 | **Skill-only:** 14
+- **Total opinions:** 56
+- **Bug prevention:** 24 | **Maintenance:** 23 | **Style:** 9
+- **Both (skill + lint):** 37 | **Skill-only:** 19
