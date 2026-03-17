@@ -4,7 +4,7 @@ milestone: v1.0
 milestone_name: milestone
 status: executing
 stopped_at: Completed 02-04-PLAN.md
-last_updated: "2026-03-17T15:32:18.678Z"
+last_updated: "2026-03-17T15:32:20.558Z"
 last_activity: 2026-03-17 -- Completed 02-04 advanced references (discriminated unions, generics, tsconfig)
 progress:
   total_phases: 5
@@ -82,6 +82,7 @@ Recent decisions affecting current work:
 - [Phase 02]: Severity tags [B]/[M]/[S] included inline per opinion in SKILL.md index
 - [Phase 02]: Kept code examples from corpus verbatim when already within 3-8 line budget
 - [Phase 02]: Exception clause in modules.md named-exports opinion retained from corpus (mentions Next.js) -- acceptable as documenting when rule does not apply
+- [Phase 02]: Branded types and variance annotations merged into generics.md reference file per research recommendation
 
 ### Pending Todos
 

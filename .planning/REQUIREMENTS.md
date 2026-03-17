@@ -22,20 +22,20 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **SKIL-04**: Type assertion restrictions (when assertions are legitimate, when not)
 - [x] **SKIL-05**: Strict null handling and narrowing patterns (guard functions, exhaustive checks)
 - [x] **SKIL-06**: Promise/async discipline (floating promises, misused promises, return-await)
-- [ ] **SKIL-07**: `const` by default, naming conventions (camelCase, PascalCase rules)
-- [ ] **SKIL-08**: Named exports only (ban default exports, rationale)
+- [x] **SKIL-07**: `const` by default, naming conventions (camelCase, PascalCase rules)
+- [x] **SKIL-08**: Named exports only (ban default exports, rationale)
 - [x] **SKIL-09**: Strict tsconfig recommendations (`strict: true`, `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes`)
 - [x] **SKIL-10**: "Why" rationale included per opinion so AI agents can relay reasoning
 
 ### Claude Skill — Differentiator Opinions
 
-- [ ] **SKIL-11**: Error handling patterns (Result types, discriminated union errors, error hierarchies, when to throw vs return)
-- [ ] **SKIL-12**: Discriminated union best practices (single discriminant field, exhaustive handling, narrowing-safe patterns)
-- [ ] **SKIL-13**: Readonly-by-default patterns (readonly params, ReadonlyArray, Readonly utility type)
-- [ ] **SKIL-14**: Module organization (ban barrel files, re-export patterns, import organization)
-- [ ] **SKIL-15**: Generic constraint patterns (generics vs overloads, tight constraints, avoid unnecessary type params)
-- [ ] **SKIL-16**: Branded/nominal type guidance (when to use, how to create, runtime validation at boundaries)
-- [ ] **SKIL-17**: Variance and conditional type pitfalls (distribution, `infer` patterns, variance annotations)
+- [x] **SKIL-11**: Error handling patterns (Result types, discriminated union errors, error hierarchies, when to throw vs return)
+- [x] **SKIL-12**: Discriminated union best practices (single discriminant field, exhaustive handling, narrowing-safe patterns)
+- [x] **SKIL-13**: Readonly-by-default patterns (readonly params, ReadonlyArray, Readonly utility type)
+- [x] **SKIL-14**: Module organization (ban barrel files, re-export patterns, import organization)
+- [x] **SKIL-15**: Generic constraint patterns (generics vs overloads, tight constraints, avoid unnecessary type params)
+- [x] **SKIL-16**: Branded/nominal type guidance (when to use, how to create, runtime validation at boundaries)
+- [x] **SKIL-17**: Variance and conditional type pitfalls (distribution, `infer` patterns, variance annotations)
 
 ### Claude Skill — Format & Distribution
 
@@ -110,17 +110,17 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SKIL-04 | Phase 2 | Complete |
 | SKIL-05 | Phase 2 | Complete |
 | SKIL-06 | Phase 2 | Complete |
-| SKIL-07 | Phase 2 | Pending |
-| SKIL-08 | Phase 2 | Pending |
+| SKIL-07 | Phase 2 | Complete |
+| SKIL-08 | Phase 2 | Complete |
 | SKIL-09 | Phase 2 | Complete |
 | SKIL-10 | Phase 2 | Complete |
-| SKIL-11 | Phase 2 | Pending |
-| SKIL-12 | Phase 2 | Pending |
-| SKIL-13 | Phase 2 | Pending |
-| SKIL-14 | Phase 2 | Pending |
-| SKIL-15 | Phase 2 | Pending |
-| SKIL-16 | Phase 2 | Pending |
-| SKIL-17 | Phase 2 | Pending |
+| SKIL-11 | Phase 2 | Complete |
+| SKIL-12 | Phase 2 | Complete |
+| SKIL-13 | Phase 2 | Complete |
+| SKIL-14 | Phase 2 | Complete |
+| SKIL-15 | Phase 2 | Complete |
+| SKIL-16 | Phase 2 | Complete |
+| SKIL-17 | Phase 2 | Complete |
 | SKIL-18 | Phase 2 | Complete |
 | SKIL-19 | Phase 2 | Complete |
 | SKIL-20 | Phase 2 | Complete |
