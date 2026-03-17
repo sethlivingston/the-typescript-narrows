@@ -29,11 +29,13 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Every opinion is classified with a severity tier (bug prevention > maintenance > style) and tagged as skill-only, lint-enforceable, or both
   3. The project directory structure is established with docs/opinions/, skill/, and eslint-plugin/ directories
   4. The opinion budget allows up to 50 opinions for v1, with a clear bar for inclusion ("prevents a real, recurring problem" or "eliminates a common ambiguity")
-**Plans**: TBD
+**Plans:** 4 plans
 
 Plans:
-- [ ] 01-01: TBD
-- [ ] 01-02: TBD
+- [ ] 01-01-PLAN.md -- Create opinion corpus structure (README.md + INDEX.md)
+- [ ] 01-02-PLAN.md -- Author Type Safety, Type Declarations, Naming, and tsconfig opinions (17)
+- [ ] 01-03-PLAN.md -- Author Null Handling, Async, Error Handling, and Conditional Types opinions (16)
+- [ ] 01-04-PLAN.md -- Author Immutability, Modules, Discriminated Unions, Generics, and Branded Types opinions (17)
 
 ### Phase 2: Claude Skill
 **Goal**: A complete, publishable Claude skill delivers all TypeScript opinions in an AI-agent-optimized format
@@ -106,7 +108,7 @@ Note: Phases 2 and 3 depend only on Phase 1, not on each other.
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Opinion Foundation | 0/? | Not started | - |
+| 1. Opinion Foundation | 0/4 | Planning complete | - |
 | 2. Claude Skill | 0/? | Not started | - |
 | 3. ESLint Plugin Scaffold | 0/? | Not started | - |
 | 4. Custom ESLint Rules | 0/? | Not started | - |
