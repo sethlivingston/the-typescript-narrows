@@ -54,9 +54,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### ESLint Plugin — Custom Rules
 
-- [ ] **LINT-06**: Custom rules evaluated and built per-phase as opinions are defined (not pre-committed to specific rules)
-- [ ] **LINT-07**: Each custom rule covers a gap that existing typescript-eslint rules cannot address
-- [ ] **LINT-08**: Custom rules have comprehensive test suites (2-3x more valid cases than invalid to prevent false positives)
+- [x] **LINT-06**: Custom rules evaluated and built per-phase as opinions are defined (not pre-committed to specific rules)
+- [x] **LINT-07**: Each custom rule covers a gap that existing typescript-eslint rules cannot address
+- [x] **LINT-08**: Custom rules have comprehensive test suites (2-3x more valid cases than invalid to prevent false positives)
 
 ### Coverage Validation
 
@@ -130,9 +130,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | LINT-03 | Phase 3 | Complete |
 | LINT-04 | Phase 3 | Complete |
 | LINT-05 | Phase 3 | Complete |
-| LINT-06 | Phase 4 | Pending |
-| LINT-07 | Phase 4 | Pending |
-| LINT-08 | Phase 4 | Pending |
+| LINT-06 | Phase 4 | Complete |
+| LINT-07 | Phase 4 | Complete |
+| LINT-08 | Phase 4 | Complete |
 | COVR-01 | Phase 5 | Pending |
 | COVR-02 | Phase 5 | Pending |
 | COVR-03 | Phase 5 | Pending |
