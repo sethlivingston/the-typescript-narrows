@@ -28,7 +28,7 @@ See: .planning/PROJECT.md (updated 2026-03-16)
 Phase: 2 of 5 (Claude Skill)
 Plan: 5 of 5 in current phase (complete)
 Status: Phase 2 complete
-Last activity: 2026-03-17 -- Completed quick task 260317-f68: Add 6 new opinions to corpus and skill
+Last activity: 2026-03-17 -- Completed quick task 260317-fs9: Add 2 new opinions (accept-interfaces, wrap-error-cause)
 
 Progress: [██████████] 100%
 
