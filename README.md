@@ -1,11 +1,11 @@
 # The TypeScript Narrows
 
-Opinionated TypeScript guidance that eliminates the "five ways to skin a cat" problem. This project provides a single, well-reasoned opinion for every common TypeScript decision point -- 59 opinions covering type safety, error handling, async patterns, naming conventions, and more. It ships as two complementary artifacts: an AI skill for Claude and an ESLint plugin for automated enforcement.
+Opinionated TypeScript guidance that eliminates the "five ways to skin a cat" problem. This project provides a single, well-reasoned opinion for every common TypeScript decision point -- over 50 opinions covering type safety, error handling, async patterns, naming conventions, and more. It ships as two complementary artifacts: an AI skill for Claude and an ESLint plugin for automated enforcement.
 
 ## Artifacts
 
-- **Claude Skill** -- [`skill/the-typescript-narrows/`](skill/the-typescript-narrows/SKILL.md) provides all 59 opinions as structured guidance for AI-assisted TypeScript development.
-- **ESLint Plugin** -- [`eslint-plugin-typescript-narrows`](eslint-plugin/) enforces 35 of the 59 opinions through lint rules, combining typescript-eslint configurations, import-x rules, and two custom rules.
+- **Claude Skill** -- [`skill/the-typescript-narrows/`](skill/the-typescript-narrows/SKILL.md) provides all opinions as structured guidance for AI-assisted TypeScript development.
+- **ESLint Plugin** -- [`eslint-plugin-typescript-narrows`](eslint-plugin/) enforces over half of the opinions through lint rules, combining typescript-eslint configurations, import-x rules, and two custom rules.
 
 ## Philosophy
 
@@ -13,7 +13,7 @@ Every opinion follows "one opinion per decision point": given a TypeScript patte
 
 ## Coverage
 
-See [docs/TRACEABILITY.md](docs/TRACEABILITY.md) for the full traceability matrix mapping all 59 opinions to their enforcement mechanisms.
+See [docs/TRACEABILITY.md](docs/TRACEABILITY.md) for the full traceability matrix mapping all opinions to their enforcement mechanisms.
 
 ## License
 

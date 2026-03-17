@@ -21,12 +21,12 @@ export default [
 
 ## What's Included
 
-- 24 typescript-eslint rules configured to opinionated defaults
+- 20+ typescript-eslint rules configured to opinionated defaults
 - 3 ESLint core rules
 - 3 import-x rules
 - 2 custom rules (ban-enums, ban-barrel-files)
 
-32 rules total, enforcing 35 of the project's 59 opinions (some rules cover multiple opinions).
+30+ rules total, enforcing over half of the project's opinions (some rules cover multiple opinions).
 
 ## Custom Rules
 
@@ -37,7 +37,7 @@ export default [
 
 ## Companion Skill
 
-This plugin pairs with [The TypeScript Narrows Claude Skill](../skill/the-typescript-narrows/SKILL.md), which provides all 59 opinions as structured guidance for AI-assisted development. The skill covers the 24 opinions that cannot be enforced through lint rules.
+This plugin pairs with [The TypeScript Narrows Claude Skill](../skill/the-typescript-narrows/SKILL.md), which provides all opinions as structured guidance for AI-assisted development. The skill covers the opinions that cannot be enforced through lint rules.
 
 ## License
 

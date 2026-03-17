@@ -1,6 +1,6 @@
 # Opinion Index
 
-59 opinions organized by topic. Each links to its opinion file. Severity and enforcement shown per opinion.
+Opinions organized by topic. Each links to its opinion file. Severity and enforcement shown per opinion.
 
 Severity: B = bug-prevention, M = maintenance, S = style | Enforcement: both, skill-only
 
@@ -116,6 +116,5 @@ Severity: B = bug-prevention, M = maintenance, S = style | Enforcement: both, sk
 
 ## Summary
 
-- **Total opinions:** 59
-- **Bug prevention:** 25 | **Maintenance:** 25 | **Style:** 9
-- **Both (skill + lint):** 35 | **Skill-only:** 24
+- **Severity tiers:** Bug prevention | Maintenance | Style
+- **Enforcement:** Both (skill + lint) | Skill-only
