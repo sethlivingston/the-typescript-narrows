@@ -2,12 +2,10 @@
 id: no-destructure-before-narrow
 title: Do not destructure discriminated unions before narrowing
 severity: bug-prevention
-enforcement: both
+enforcement: skill-only
 confidence: strong
 tags: [discriminated-unions, narrowing]
 related: [single-discriminant, exhaustive-switch]
-lint:
-  type: custom
 ---
 
 ## Stance
@@ -39,3 +37,7 @@ function handle(result: Result) {
   }
 }
 ```
+
+## Exceptions
+
+This opinion is enforced via skill guidance only. A custom ESLint rule is not practical because reliably detecting destructuring of discriminated unions before narrowing requires type-aware analysis of union relationships that goes beyond what AST-level linting can accomplish.

@@ -86,8 +86,8 @@ Severity: B = bug-prevention, M = maintenance, S = style | Enforcement: both, sk
 
 ## Discriminated Unions
 
-- [single-discriminant](single-discriminant.md) -- Use a single `type` or `kind` field as discriminant [M] [both]
-- [no-destructure-before-narrow](no-destructure-before-narrow.md) -- Do not destructure discriminated unions before narrowing [B] [both]
+- [single-discriminant](single-discriminant.md) -- Use a single `type` or `kind` field as discriminant [M] [skill-only]
+- [no-destructure-before-narrow](no-destructure-before-narrow.md) -- Do not destructure discriminated unions before narrowing [B] [skill-only]
 - [exhaustive-discrimination](exhaustive-discrimination.md) -- Always handle all variants of a discriminated union [B] [both]
 
 ## Generics & Advanced Types
@@ -118,4 +118,4 @@ Severity: B = bug-prevention, M = maintenance, S = style | Enforcement: both, sk
 
 - **Total opinions:** 59
 - **Bug prevention:** 25 | **Maintenance:** 25 | **Style:** 9
-- **Both (skill + lint):** 37 | **Skill-only:** 22
+- **Both (skill + lint):** 35 | **Skill-only:** 24

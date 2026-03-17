@@ -1,6 +1,6 @@
 # Traceability Matrix
 
-Generated: 2026-03-17 | Opinions: 59 | Covered: 35 | Skill-only: 22 | Gaps: 2
+Generated: 2026-03-17 | Opinions: 59 | Covered: 35 | Skill-only: 24 | Gaps: 0
 
 ## Coverage
 
@@ -23,7 +23,7 @@ Generated: 2026-03-17 | Opinions: 59 | Covered: 35 | Skill-only: 22 | Gaps: 2
 | naming-convention | PascalCase types, camelCase values, UPPER_CASE constants | S | both | naming.md | @typescript-eslint/naming-convention | covered |
 | no-circular-deps | Avoid circular dependencies | B | both | modules.md | import/no-cycle | covered |
 | no-const-enum | Never use const enum | B | both | type-declarations.md | typescript-narrows/ban-enums | covered |
-| no-destructure-before-narrow | Do not destructure discriminated unions before narrowing | B | both | discriminated-unions.md | typescript-narrows/no-destructure-before-narrow | gap |
+| no-destructure-before-narrow | Do not destructure discriminated unions before narrowing | B | skill-only | discriminated-unions.md | -- | skill-only |
 | no-empty-catch | Do not silently swallow errors with empty catch blocks | B | both | error-handling.md | no-empty | covered |
 | no-explicit-any | Never use explicit any | B | both | type-safety.md | @typescript-eslint/no-explicit-any | covered |
 | no-floating-promises | Always handle Promise rejections | B | both | async-promises.md | @typescript-eslint/no-floating-promises | covered |
@@ -56,7 +56,7 @@ Generated: 2026-03-17 | Opinions: 59 | Covered: 35 | Skill-only: 22 | Gaps: 2
 | require-await | Do not mark functions async unless they use await | M | both | async-promises.md | @typescript-eslint/require-await | covered |
 | result-over-throw | Prefer Result types for expected failures, throw for bugs | M | skill-only | error-handling.md | -- | skill-only |
 | return-await | Always return await in try/catch blocks | B | both | async-promises.md | @typescript-eslint/return-await | covered |
-| single-discriminant | Use a single type or kind field as discriminant | M | both | discriminated-unions.md | typescript-narrows/single-discriminant | gap |
+| single-discriminant | Use a single type or kind field as discriminant | M | skill-only | discriminated-unions.md | -- | skill-only |
 | strict-boolean-expressions | Require explicit boolean comparisons | B | both | type-safety.md | @typescript-eslint/strict-boolean-expressions | covered |
 | strict-null-checks | Enable strictNullChecks (never disable) | B | skill-only | null-handling.md | -- | skill-only |
 | strict-tsconfig | Enable strict: true and all strict family flags | B | skill-only | tsconfig-advanced.md | -- | skill-only |
@@ -68,7 +68,4 @@ Generated: 2026-03-17 | Opinions: 59 | Covered: 35 | Skill-only: 22 | Gaps: 2
 
 ## Gaps
 
-| Opinion ID | Title | Enforcement | Issue |
-|------------|-------|-------------|-------|
-| no-destructure-before-narrow | Do not destructure discriminated unions before narrowing | both | lint rule not in strict config |
-| single-discriminant | Use a single type or kind field as discriminant | both | lint rule not in strict config |
+(none)

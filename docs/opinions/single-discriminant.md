@@ -2,12 +2,10 @@
 id: single-discriminant
 title: Use a single type or kind field as discriminant
 severity: maintenance
-enforcement: both
+enforcement: skill-only
 confidence: moderate
 tags: [discriminated-unions, patterns]
 related: [exhaustive-discrimination, no-destructure-before-narrow, exhaustive-switch]
-lint:
-  type: custom
 ---
 
 ## Stance
@@ -36,3 +34,7 @@ type Shape = {
   height?: number;
 };
 ```
+
+## Exceptions
+
+This opinion is enforced via skill guidance only. A custom ESLint rule is not practical because detecting whether a union type uses a single discriminant field requires whole-program type analysis that static AST-based linting cannot reliably perform.
