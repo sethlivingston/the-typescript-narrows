@@ -3,9 +3,9 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Completed quick/260317-ew7
-last_updated: "2026-03-17T15:46:28.739Z"
-last_activity: 2026-03-17 -- Completed quick task 260317-ew7: Remove bold formatting from SKILL.md opinion bullets and review for duplicates
+stopped_at: Completed quick/260317-f68
+last_updated: "2026-03-17T16:07:36.269Z"
+last_activity: "2026-03-17 -- Completed quick task 260317-ew7: Remove bold formatting and deduplicate SKILL.md"
 progress:
   total_phases: 5
   completed_phases: 2
@@ -28,7 +28,7 @@ See: .planning/PROJECT.md (updated 2026-03-16)
 Phase: 2 of 5 (Claude Skill)
 Plan: 5 of 5 in current phase (complete)
 Status: Phase 2 complete
-Last activity: 2026-03-17 -- Completed quick task 260317-ew7: Remove bold formatting and deduplicate SKILL.md
+Last activity: 2026-03-17 -- Completed quick task 260317-f68: Add 6 new opinions to corpus and skill
 
 Progress: [██████████] 100%
 
@@ -60,6 +60,7 @@ Progress: [██████████] 100%
 | Phase 02 P03 | 2min | 2 tasks | 4 files |
 | Phase 02 P02 | 3min | 2 tasks | 4 files |
 | Phase 02 P05 | 1min | 1 tasks | 1 files |
+| Phase quick/260317-f68 P01 | 3min | 2 tasks | 13 files |
 
 ## Accumulated Context
 
@@ -85,6 +86,7 @@ Recent decisions affecting current work:
 - [Phase 02]: Exception clause in modules.md named-exports opinion retained from corpus (mentions Next.js) -- acceptable as documenting when rule does not apply
 - [Phase 02]: Branded types and variance annotations merged into generics.md reference file per research recommendation
 - [Phase 02]: Framework mentions in exception clauses are acceptable; not framework-specific content
+- [Phase quick/260317-f68]: Created 3 new topic groups (Iteration and Transforms, Control Flow, Functions) for new opinions
 
 ### Pending Todos
 
@@ -99,9 +101,10 @@ None yet.
 | # | Description | Date | Commit | Directory |
 |---|-------------|------|--------|-----------|
 | 260317-ew7 | Remove bold formatting from SKILL.md opinion bullets and review for duplicates | 2026-03-17 | c56d5f8 | [260317-ew7-remove-bold-formatting-from-skill-md-opi](./quick/260317-ew7-remove-bold-formatting-from-skill-md-opi/) |
+| 260317-f68 | Add 6 new opinions (prefer-for-of, no-reduce, prefer-early-return, prefer-arrow-functions, explicit-return-types, prefer-undefined) | 2026-03-17 | b027ca3 | [260317-f68-add-new-opinions-foreach-vs-for-of-async](./quick/260317-f68-add-new-opinions-foreach-vs-for-of-async/) |
 
 ## Session Continuity
 
-Last session: 2026-03-17T15:46:28.726Z
-Stopped at: Completed quick/260317-ew7
+Last session: 2026-03-17T16:07:28.447Z
+Stopped at: Completed quick/260317-f68
 Resume file: None
