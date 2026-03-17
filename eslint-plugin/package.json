@@ -13,27 +13,30 @@
       "require": "./dist/index.cjs"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "engines": {
     "node": ">=18.18.0"
   },
   "peerDependencies": {
-    "eslint": "^9.0.0 || ^10.0.0",
     "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0 || ^10.0.0",
     "eslint-plugin-import-x": "^4.0.0"
   },
   "dependencies": {
     "@typescript-eslint/utils": "^8.0.0",
+    "minimatch": "^10.2.4",
     "typescript-eslint": "^8.0.0"
   },
   "devDependencies": {
+    "@typescript-eslint/parser": "^8.0.0",
     "@typescript-eslint/rule-tester": "^8.0.0",
     "eslint": "^10.0.0",
+    "eslint-plugin-import-x": "^4.0.0",
     "tsup": "^8.5.0",
     "typescript": "^5.5.0",
-    "vitest": "^4.0.0",
-    "@typescript-eslint/parser": "^8.0.0",
-    "eslint-plugin-import-x": "^4.0.0"
+    "vitest": "^4.0.0"
   },
   "scripts": {
     "build": "tsup",
