@@ -12,7 +12,7 @@ The TypeScript Narrows delivers a dual-artifact TypeScript guidance ecosystem: a
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Opinion Foundation** - Define the canonical opinion corpus that both artifacts derive from
+- [x] **Phase 1: Opinion Foundation** - Define the canonical opinion corpus that both artifacts derive from (completed 2026-03-17)
 - [ ] **Phase 2: Claude Skill** - Author the complete AI-agent-readable skill from the opinion corpus
 - [ ] **Phase 3: ESLint Plugin Scaffold** - Build and prove the plugin infrastructure before writing rules
 - [ ] **Phase 4: Custom ESLint Rules** - Implement custom rules and opinionated configs that distinguish the plugin
@@ -29,7 +29,7 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Every opinion is classified with a severity tier (bug prevention > maintenance > style) and tagged as skill-only, lint-enforceable, or both
   3. The project directory structure is established with the docs/opinions/ directory containing README.md, INDEX.md, and all opinion files
   4. The opinion budget allows up to 50 opinions for v1, with a clear bar for inclusion ("prevents a real, recurring problem" or "eliminates a common ambiguity")
-**Plans:** 5 plans
+**Plans:** 5/5 plans complete
 
 Plans:
 - [ ] 01-01-PLAN.md -- Create opinion corpus structure (README.md + INDEX.md)
@@ -109,7 +109,7 @@ Note: Phases 2 and 3 depend only on Phase 1, not on each other.
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Opinion Foundation | 0/5 | Planning complete | - |
+| 1. Opinion Foundation | 5/5 | Complete   | 2026-03-17 |
 | 2. Claude Skill | 0/? | Not started | - |
 | 3. ESLint Plugin Scaffold | 0/? | Not started | - |
 | 4. Custom ESLint Rules | 0/? | Not started | - |
