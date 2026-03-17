@@ -28,6 +28,18 @@
 }
 ```
 
+With strict mode enabled, the compiler catches implicit any and uninitialized properties:
+
+```typescript
+// strict: true catches these at compile time
+function process(data: unknown) {
+  if (typeof data === "string") {
+    return data.toUpperCase(); // safe -- narrowed to string
+  }
+  return String(data);
+}
+```
+
 **Exception:** Legacy migration may disable individual flags temporarily while converting the codebase, but the goal is always full strict mode. Track disabled flags as tech debt and re-enable them incrementally.
 
 ---
