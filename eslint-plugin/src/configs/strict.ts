@@ -82,6 +82,10 @@ export function createStrictConfig(plugin: ESLint.Plugin): Linter.Config[] {
             custom: { regex: '^T[A-Z]', match: false },
           },
         ],
+
+        // typescript-narrows custom rules (2)
+        'typescript-narrows/ban-enums': 'error',
+        'typescript-narrows/ban-barrel-files': 'error',
       },
     },
   ];

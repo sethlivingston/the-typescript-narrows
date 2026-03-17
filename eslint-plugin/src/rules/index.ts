@@ -1,5 +1,7 @@
-import { placeholder } from './placeholder.js';
+import { banEnums } from './ban-enums.js';
+import { banBarrelFiles } from './ban-barrel-files.js';
 
 export const rules = {
-  placeholder,
+  'ban-enums': banEnums,
+  'ban-barrel-files': banBarrelFiles,
 };
