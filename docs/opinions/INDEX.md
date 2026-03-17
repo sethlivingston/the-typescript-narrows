@@ -96,5 +96,5 @@ Severity: B = bug-prevention, M = maintenance, S = style | Enforcement: both, sk
 ## Summary
 
 - **Total opinions:** 50
-- **Bug prevention:** 23 | **Maintenance:** 19 | **Style:** 8
-- **Both (skill + lint):** 33 | **Skill-only:** 17
+- **Bug prevention:** 24 | **Maintenance:** 19 | **Style:** 7
+- **Both (skill + lint):** 36 | **Skill-only:** 14
