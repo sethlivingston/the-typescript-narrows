@@ -3,8 +3,8 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Completed 05-02-PLAN.md
-last_updated: "2026-03-17T21:21:16.162Z"
+stopped_at: Completed quick/260317-mtj
+last_updated: "2026-03-17T21:29:47.731Z"
 last_activity: 2026-03-17 - Completed 05-02 publish preparation
 progress:
   total_phases: 5
@@ -70,6 +70,7 @@ Progress: [██████████] 100%
 | Phase 05 P01 | 4min | 2 tasks | 5 files |
 | Phase 05 P02 | 2min | 1 tasks | 8 files |
 | Phase 05 P02 | 3min | 2 tasks | 8 files |
+| Phase quick/260317-mtj P01 | 1min | 1 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -105,6 +106,7 @@ Recent decisions affecting current work:
 - [Phase 04]: minimatch used for allowPatterns glob matching in ban-barrel-files rule
 - [Phase 05]: Reclassified single-discriminant and no-destructure-before-narrow from both to skill-only (custom lint rules not practical)
 - [Phase 05]: Version set to 0.9.0 (pre-1.0 publish-ready state)
+- [Phase quick/260317-mtj]: INDEX.md summary section simplified to list categories without counts since full list visible above
 
 ### Pending Todos
 
@@ -122,9 +124,10 @@ None yet.
 | 260317-f68 | Add 6 new opinions (prefer-for-of, no-reduce, prefer-early-return, prefer-arrow-functions, explicit-return-types, prefer-undefined) | 2026-03-17 | b027ca3 | [260317-f68-add-new-opinions-foreach-vs-for-of-async](./quick/260317-f68-add-new-opinions-foreach-vs-for-of-async/) |
 | 260317-fs9 | Add 2 new opinions (accept-interfaces, wrap-error-cause) | 2026-03-17 | 66d03bb | [260317-fs9-add-2-new-opinions-accept-interfaces-and](./quick/260317-fs9-add-2-new-opinions-accept-interfaces-and/) |
 | 260317-j2m | Update add-opinion command with ESLint integration steps (5-6) | 2026-03-17 | 618210c | [260317-j2m-update-add-opinion-command-to-carry-opin](./quick/260317-j2m-update-add-opinion-command-to-carry-opin/) |
+| 260317-mtj | Replace fragile specific counts in consumer-facing .md files with approximate language | 2026-03-17 | dddb747 | [260317-mtj-replace-fragile-specific-counts-in-md-fi](./quick/260317-mtj-replace-fragile-specific-counts-in-md-fi/) |
 
 ## Session Continuity
 
-Last session: 2026-03-17T21:15:36.153Z
-Stopped at: Completed 05-02-PLAN.md
+Last session: 2026-03-17T21:29:40.480Z
+Stopped at: Completed quick/260317-mtj
 Resume file: None
