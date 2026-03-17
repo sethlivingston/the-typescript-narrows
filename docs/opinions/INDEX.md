@@ -1,6 +1,6 @@
 # Opinion Index
 
-58 opinions organized by topic. Each links to its opinion file. Severity and enforcement shown per opinion.
+59 opinions organized by topic. Each links to its opinion file. Severity and enforcement shown per opinion.
 
 Severity: B = bug-prevention, M = maintenance, S = style | Enforcement: both, skill-only
 
@@ -106,12 +106,16 @@ Severity: B = bug-prevention, M = maintenance, S = style | Enforcement: both, sk
 - [strict-tsconfig](strict-tsconfig.md) -- Enable `strict: true` and all strict family flags [B] [skill-only]
 - [no-unchecked-index](no-unchecked-index.md) -- Enable `noUncheckedIndexedAccess` [B] [skill-only]
 
+## Resource Management
+
+- [prefer-using-declarations](prefer-using-declarations.md) -- Use `using` declarations to tie resource lifetimes to scope [B] [skill-only]
+
 ## Conditional Types & Advanced Pitfalls
 
 - [conditional-type-safety](conditional-type-safety.md) -- Wrap conditional types to prevent unintended distribution [B] [skill-only]
 
 ## Summary
 
-- **Total opinions:** 58
-- **Bug prevention:** 24 | **Maintenance:** 25 | **Style:** 9
-- **Both (skill + lint):** 37 | **Skill-only:** 21
+- **Total opinions:** 59
+- **Bug prevention:** 25 | **Maintenance:** 25 | **Style:** 9
+- **Both (skill + lint):** 37 | **Skill-only:** 22

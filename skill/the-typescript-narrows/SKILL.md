@@ -139,6 +139,12 @@ For rationale and examples: [references/discriminated-unions.md](references/disc
 
 For rationale and examples: [references/generics.md](references/generics.md)
 
+## Resource Management
+
+- Use `using` and `await using` to bind resource lifetimes to scope; never rely on manual try/finally cleanup. [B]
+
+For rationale and examples: [references/resource-management.md](references/resource-management.md)
+
 ## tsconfig and Advanced Pitfalls
 
 - Enable `strict: true` and all strict family flags. [B]
