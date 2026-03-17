@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: completed
-stopped_at: Phase 2 context gathered
-last_updated: "2026-03-17T14:42:51.595Z"
-last_activity: 2026-03-17 -- Completed 01-05 gap closure (INDEX.md stats + ROADMAP criterion)
+status: in-progress
+stopped_at: Completed 02-01-PLAN.md
+last_updated: "2026-03-17T15:25:38Z"
+last_activity: 2026-03-17 -- Completed 02-01 SKILL.md index creation
 progress:
   total_phases: 5
   completed_phases: 1
-  total_plans: 5
-  completed_plans: 5
+  total_plans: 10
+  completed_plans: 6
   percent: 100
 ---
 
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-16)
 
 **Core value:** Eliminate the "5 ways to skin a cat" problem in TypeScript by providing a single, well-reasoned opinion for every common decision point
-**Current focus:** Phase 1 - Opinion Foundation
+**Current focus:** Phase 2 - Claude Skill
 
 ## Current Position
 
-Phase: 1 of 5 (Opinion Foundation) -- COMPLETE
-Plan: 5 of 5 in current phase
-Status: Phase complete
-Last activity: 2026-03-17 -- Completed 01-05 gap closure (INDEX.md stats + ROADMAP criterion)
+Phase: 2 of 5 (Claude Skill)
+Plan: 1 of 5 in current phase
+Status: In progress
+Last activity: 2026-03-17 -- Completed 02-01 SKILL.md index creation
 
-Progress: [██████████] 100%
+Progress: [██████░░░░] 60%
 
 ## Performance Metrics
 
@@ -55,6 +55,7 @@ Progress: [██████████] 100%
 | Phase 01 P03 | 3min | 2 tasks | 16 files |
 | Phase 01 P04 | 3min | 2 tasks | 17 files |
 | Phase 01 P05 | 1min | 2 tasks | 1 files |
+| Phase 02 P01 | 2min | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -73,6 +74,9 @@ Recent decisions affecting current work:
 - [Phase 01]: no-const-enum lint field set to type: custom since const enum ban is enforced as part of broader ban-enums custom rule
 - [Phase 01]: no-empty-catch uses ESLint core 'no-empty' rule (not @typescript-eslint prefix)
 - [Phase 01]: ROADMAP criterion 3 was already corrected prior to plan 05 execution
+- [Phase 02]: Used nested directory skill/the-typescript-narrows/ to satisfy Agent Skills spec name-matches-directory requirement
+- [Phase 02]: Merged small topic groups into 11 reference files (Branded Types into Generics, tsconfig+Conditional Types into tsconfig-advanced)
+- [Phase 02]: Severity tags [B]/[M]/[S] included inline per opinion in SKILL.md index
 
 ### Pending Todos
 
@@ -84,6 +88,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-17T14:42:51.585Z
-Stopped at: Phase 2 context gathered
-Resume file: .planning/phases/02-claude-skill/02-CONTEXT.md
+Last session: 2026-03-17T15:25:38Z
+Stopped at: Completed 02-01-PLAN.md
+Resume file: .planning/phases/02-claude-skill/02-01-SUMMARY.md

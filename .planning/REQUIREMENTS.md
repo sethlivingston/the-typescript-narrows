@@ -25,7 +25,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **SKIL-07**: `const` by default, naming conventions (camelCase, PascalCase rules)
 - [ ] **SKIL-08**: Named exports only (ban default exports, rationale)
 - [ ] **SKIL-09**: Strict tsconfig recommendations (`strict: true`, `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes`)
-- [ ] **SKIL-10**: "Why" rationale included per opinion so AI agents can relay reasoning
+- [x] **SKIL-10**: "Why" rationale included per opinion so AI agents can relay reasoning
 
 ### Claude Skill — Differentiator Opinions
 
@@ -39,10 +39,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Claude Skill — Format & Distribution
 
-- [ ] **SKIL-18**: Skill is pure markdown with YAML frontmatter following Anthropic skill spec
-- [ ] **SKIL-19**: SKILL.md under 500 lines using progressive disclosure (index + reference files)
-- [ ] **SKIL-20**: Framework and platform agnostic — no React, Next, Express, etc. opinions
-- [ ] **SKIL-21**: Publishable to Claude skill registry/marketplace
+- [x] **SKIL-18**: Skill is pure markdown with YAML frontmatter following Anthropic skill spec
+- [x] **SKIL-19**: SKILL.md under 500 lines using progressive disclosure (index + reference files)
+- [x] **SKIL-20**: Framework and platform agnostic — no React, Next, Express, etc. opinions
+- [x] **SKIL-21**: Publishable to Claude skill registry/marketplace
 
 ### ESLint Plugin — Infrastructure
 
@@ -113,7 +113,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SKIL-07 | Phase 2 | Pending |
 | SKIL-08 | Phase 2 | Pending |
 | SKIL-09 | Phase 2 | Pending |
-| SKIL-10 | Phase 2 | Pending |
+| SKIL-10 | Phase 2 | Complete |
 | SKIL-11 | Phase 2 | Pending |
 | SKIL-12 | Phase 2 | Pending |
 | SKIL-13 | Phase 2 | Pending |
@@ -121,10 +121,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SKIL-15 | Phase 2 | Pending |
 | SKIL-16 | Phase 2 | Pending |
 | SKIL-17 | Phase 2 | Pending |
-| SKIL-18 | Phase 2 | Pending |
-| SKIL-19 | Phase 2 | Pending |
-| SKIL-20 | Phase 2 | Pending |
-| SKIL-21 | Phase 2 | Pending |
+| SKIL-18 | Phase 2 | Complete |
+| SKIL-19 | Phase 2 | Complete |
+| SKIL-20 | Phase 2 | Complete |
+| SKIL-21 | Phase 2 | Complete |
 | LINT-01 | Phase 3 | Pending |
 | LINT-02 | Phase 3 | Pending |
 | LINT-03 | Phase 3 | Pending |
