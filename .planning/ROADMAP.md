@@ -67,11 +67,12 @@ Plans:
   3. The plugin composes cleanly alongside existing typescript-eslint configs and other custom ESLint rules without conflicts
   4. The build produces both CJS and ESM outputs with type declarations, and the test suite runs with Vitest and @typescript-eslint/rule-tester against ESLint 10
   5. The package is structured for npm publication with correct peer dependencies (eslint ^9 || ^10, @typescript-eslint/parser ^8)
-**Plans**: TBD
+**Plans:** 3 plans
 
 Plans:
-- [ ] 03-01: TBD
-- [ ] 03-02: TBD
+- [ ] 03-01-PLAN.md -- Scaffold package with build tooling and test infrastructure
+- [ ] 03-02-PLAN.md -- Implement plugin source: strict preset, placeholder rule, RuleCreator
+- [ ] 03-03-PLAN.md -- Create test suite: rule tests, config validation, integration smoke test
 
 ### Phase 4: Custom ESLint Rules
 **Goal**: Custom rules covering gaps that no existing plugin addresses are implemented, tested, and integrated into the preset configs
@@ -113,6 +114,6 @@ Note: Phases 2 and 3 depend only on Phase 1, not on each other.
 |-------|----------------|--------|-----------|
 | 1. Opinion Foundation | 5/5 | Complete   | 2026-03-17 |
 | 2. Claude Skill | 4/5 | In Progress|  |
-| 3. ESLint Plugin Scaffold | 0/? | Not started | - |
+| 3. ESLint Plugin Scaffold | 0/3 | Not started | - |
 | 4. Custom ESLint Rules | 0/? | Not started | - |
 | 5. Coverage Validation and Publishing | 0/? | Not started | - |
