@@ -9,10 +9,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Opinion Corpus
 
-- [ ] **OPIN-01**: Enumerate the top 50 TypeScript "multiple ways to do it" ambiguities and gotchas as the canonical opinion list
+- [x] **OPIN-01**: Enumerate the top 50 TypeScript "multiple ways to do it" ambiguities and gotchas as the canonical opinion list
 - [ ] **OPIN-02**: Each opinion has a clear stance, rationale ("because X"), and severity tier (bug prevention > maintenance > style)
 - [ ] **OPIN-03**: Each opinion is tagged as skill-only, lint-enforceable, or both
-- [ ] **OPIN-04**: Up to 50 opinions for v1 if the enumeration surfaces enough that warrant attention; no artificial cap
+- [x] **OPIN-04**: Up to 50 opinions for v1 if the enumeration surfaces enough that warrant attention; no artificial cap
 
 ### Claude Skill — Table Stakes Opinions
 
@@ -100,10 +100,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| OPIN-01 | Phase 1 | Pending |
+| OPIN-01 | Phase 1 | Complete |
 | OPIN-02 | Phase 1 | Pending |
 | OPIN-03 | Phase 1 | Pending |
-| OPIN-04 | Phase 1 | Pending |
+| OPIN-04 | Phase 1 | Complete |
 | SKIL-01 | Phase 2 | Pending |
 | SKIL-02 | Phase 2 | Pending |
 | SKIL-03 | Phase 2 | Pending |
