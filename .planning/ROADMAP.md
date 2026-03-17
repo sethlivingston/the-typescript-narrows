@@ -98,11 +98,11 @@ Plans:
   2. Lint rules exist only where static analysis makes sense -- guidance-only opinions are clearly marked as skill-only with no forced automation
   3. The ESLint plugin is published on npm and installable by external users
   4. The Claude skill is deployable to .claude/skills/ or the Claude skill registry
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 05-01: TBD
-- [ ] 05-02: TBD
+- [ ] 05-01-PLAN.md -- Build traceability script and validate coverage across all 59 opinions
+- [ ] 05-02-PLAN.md -- Add LICENSE files, READMEs, version bump, package metadata, and verify publish readiness
 
 ## Progress
 
@@ -116,4 +116,4 @@ Note: Phases 2 and 3 depend only on Phase 1, not on each other.
 | 2. Claude Skill | 4/5 | In Progress|  |
 | 3. ESLint Plugin Scaffold | 0/3 | Not started | - |
 | 4. Custom ESLint Rules | 2/2 | Complete   | 2026-03-17 |
-| 5. Coverage Validation and Publishing | 0/? | Not started | - |
+| 5. Coverage Validation and Publishing | 0/2 | Not started | - |
