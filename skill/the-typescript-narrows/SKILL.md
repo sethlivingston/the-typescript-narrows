@@ -39,6 +39,7 @@ For rationale and examples: [references/type-safety.md](references/type-safety.m
 - Ban enums (including `const enum`); use `as const` objects with type unions instead. [B]
 - Do not use TypeScript namespaces; use ES modules. [M]
 - Use `import type` for type-only imports. [S]
+- Require explicit return types on exported functions; internal functions can rely on inference. [M]
 
 For rationale and examples: [references/type-declarations.md](references/type-declarations.md)
 
@@ -49,6 +50,7 @@ For rationale and examples: [references/type-declarations.md](references/type-de
 - Use `??` instead of `||` for nullish fallbacks. [B]
 - Narrow types with type guards instead of type assertions. [B]
 - Enable `strictNullChecks` and never disable it. [B]
+- Prefer `undefined` over `null`; match JavaScript's natural defaults. [S]
 
 For rationale and examples: [references/null-handling.md](references/null-handling.md)
 
@@ -62,6 +64,13 @@ For rationale and examples: [references/null-handling.md](references/null-handli
 
 For rationale and examples: [references/async-promises.md](references/async-promises.md)
 
+## Iteration and Transforms
+
+- Use `for...of` over `.forEach()`; forEach swallows break/continue/return/await. [M]
+- Do not use `.reduce()`; use `for...of` or `.map`/`.filter` combinations. [M]
+
+For rationale and examples: [references/iteration.md](references/iteration.md)
+
 ## Error Handling
 
 - Throw only Error subclasses; never throw primitives or plain objects. [B]
@@ -70,6 +79,18 @@ For rationale and examples: [references/async-promises.md](references/async-prom
 - Never swallow errors with empty catch blocks. [B]
 
 For rationale and examples: [references/error-handling.md](references/error-handling.md)
+
+## Control Flow
+
+- Return early for preconditions; keep the happy path left-aligned. [M]
+
+For rationale and examples: [references/control-flow.md](references/control-flow.md)
+
+## Functions
+
+- Use arrow functions by default; use function declarations only when hoisting is needed. [S]
+
+For rationale and examples: [references/functions.md](references/functions.md)
 
 ## Immutability and Const
 
