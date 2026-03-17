@@ -224,7 +224,7 @@ function validateOpinion(opinion, strictRules, refs) {
         lintRule = customRuleName;
         // For custom rules not yet implemented, they are gaps
         // unless they're covered by another mechanism
-        status = skillRef ? 'gap' : 'gap';
+        status = 'gap';
       }
     }
 
