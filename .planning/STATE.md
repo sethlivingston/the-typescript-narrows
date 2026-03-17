@@ -3,9 +3,9 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: completed
-stopped_at: Completed quick/260317-f68
-last_updated: "2026-03-17T16:07:36.269Z"
-last_activity: "2026-03-17 -- Completed quick task 260317-ew7: Remove bold formatting and deduplicate SKILL.md"
+stopped_at: Completed quick/260317-fs9
+last_updated: "2026-03-17T16:27:24.438Z"
+last_activity: "2026-03-17 -- Completed quick task 260317-f68: Add 6 new opinions to corpus and skill"
 progress:
   total_phases: 5
   completed_phases: 2
@@ -61,6 +61,7 @@ Progress: [██████████] 100%
 | Phase 02 P02 | 3min | 2 tasks | 4 files |
 | Phase 02 P05 | 1min | 1 tasks | 1 files |
 | Phase quick/260317-f68 P01 | 3min | 2 tasks | 13 files |
+| Phase quick/260317-fs9 P01 | 1min | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -87,6 +88,8 @@ Recent decisions affecting current work:
 - [Phase 02]: Branded types and variance annotations merged into generics.md reference file per research recommendation
 - [Phase 02]: Framework mentions in exception clauses are acceptable; not framework-specific content
 - [Phase quick/260317-f68]: Created 3 new topic groups (Iteration and Transforms, Control Flow, Functions) for new opinions
+- [Phase quick/260317-fs9]: accept-interfaces scoped to functions only (not constructors or React props)
+- [Phase quick/260317-fs9]: wrap-error-cause uses ES2022 Error cause only (no custom error classes)
 
 ### Pending Todos
 
@@ -102,9 +105,10 @@ None yet.
 |---|-------------|------|--------|-----------|
 | 260317-ew7 | Remove bold formatting from SKILL.md opinion bullets and review for duplicates | 2026-03-17 | c56d5f8 | [260317-ew7-remove-bold-formatting-from-skill-md-opi](./quick/260317-ew7-remove-bold-formatting-from-skill-md-opi/) |
 | 260317-f68 | Add 6 new opinions (prefer-for-of, no-reduce, prefer-early-return, prefer-arrow-functions, explicit-return-types, prefer-undefined) | 2026-03-17 | b027ca3 | [260317-f68-add-new-opinions-foreach-vs-for-of-async](./quick/260317-f68-add-new-opinions-foreach-vs-for-of-async/) |
+| 260317-fs9 | Add 2 new opinions (accept-interfaces, wrap-error-cause) | 2026-03-17 | 66d03bb | [260317-fs9-add-2-new-opinions-accept-interfaces-and](./quick/260317-fs9-add-2-new-opinions-accept-interfaces-and/) |
 
 ## Session Continuity
 
-Last session: 2026-03-17T16:07:28.447Z
-Stopped at: Completed quick/260317-f68
+Last session: 2026-03-17T16:27:18.698Z
+Stopped at: Completed quick/260317-fs9
 Resume file: None
