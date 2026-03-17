@@ -23,105 +23,104 @@ Apply these opinions when writing new TypeScript code, refactoring existing code
 
 ## Type Safety
 
-- **Never use explicit `any`; use `unknown` and narrow before use.** [B]
-- **Use `unknown` for values of uncertain type to force callers to narrow.** [B]
-- **Restrict type assertions to proven-safe patterns only.** [B]
-- **Do not use the `!` non-null assertion operator; use proper null checks.** [B]
-- **Require explicit boolean comparisons; no truthy/falsy shortcuts.** [B]
-- **Type catch clause variables as `unknown`; never assume error shape.** [B]
-- **Do not return unsafe `any`-typed values from functions.** [B]
+- Never use explicit `any`; use `unknown` and narrow before use. [B]
+- Use `unknown` for values of uncertain type to force callers to narrow. [B]
+- Restrict type assertions to proven-safe patterns only. [B]
+- Do not use the `!` non-null assertion operator; use proper null checks. [B]
+- Require explicit boolean comparisons; no truthy/falsy shortcuts. [B]
+- Type catch clause variables as `unknown`; never assume error shape. [B]
+- Do not return unsafe `any`-typed values from functions. [B]
 
 For rationale and examples: [references/type-safety.md](references/type-safety.md)
 
 ## Type Declarations
 
-- **Use interfaces for object shapes; use type aliases for unions, intersections, and utilities.** [M]
-- **Ban enums; use `as const` objects with type unions instead.** [M]
-- **Do not use TypeScript namespaces; use ES modules.** [M]
-- **Use `import type` for type-only imports.** [S]
-- **Never use `const enum`; use plain `as const` objects.** [B]
+- Use interfaces for object shapes; use type aliases for unions, intersections, and utilities. [M]
+- Ban enums; use `as const` objects with type unions instead. [M]
+- Do not use TypeScript namespaces; use ES modules. [M]
+- Use `import type` for type-only imports. [S]
+- Never use `const enum`; use plain `as const` objects. [B]
 
 For rationale and examples: [references/type-declarations.md](references/type-declarations.md)
 
 ## Null Handling and Narrowing
 
-- **Handle all cases in discriminated union switches; use exhaustive checks.** [B]
-- **Use optional chaining over manual null checks.** [S]
-- **Do not write conditions that are always true or always false.** [B]
-- **Use `??` instead of `||` for nullish fallbacks.** [B]
-- **Narrow types with type guards instead of type assertions.** [B]
-- **Enable `strictNullChecks` and never disable it.** [B]
+- Use optional chaining over manual null checks. [S]
+- Do not write conditions that are always true or always false. [B]
+- Use `??` instead of `||` for nullish fallbacks. [B]
+- Narrow types with type guards instead of type assertions. [B]
+- Enable `strictNullChecks` and never disable it. [B]
 
 For rationale and examples: [references/null-handling.md](references/null-handling.md)
 
 ## Async and Promises
 
-- **Always handle Promise rejections; never leave a Promise floating.** [B]
-- **Do not pass Promises where void callbacks are expected.** [B]
-- **Do not mark functions `async` unless they use `await`.** [M]
-- **Always `return await` inside try/catch blocks.** [B]
-- **Use async/await over `.then()` chains.** [M]
+- Always handle Promise rejections; never leave a Promise floating. [B]
+- Do not pass Promises where void callbacks are expected. [B]
+- Do not mark functions `async` unless they use `await`. [M]
+- Always `return await` inside try/catch blocks. [B]
+- Use async/await over `.then()` chains. [M]
 
 For rationale and examples: [references/async-promises.md](references/async-promises.md)
 
 ## Error Handling
 
-- **Throw only Error subclasses; never throw primitives or plain objects.** [B]
-- **Prefer Result types for expected failures; reserve throw for bugs.** [M]
-- **Use discriminated union errors for error categories, not string messages.** [M]
-- **Never swallow errors with empty catch blocks.** [B]
+- Throw only Error subclasses; never throw primitives or plain objects. [B]
+- Prefer Result types for expected failures; reserve throw for bugs. [M]
+- Use discriminated union errors for error categories, not string messages. [M]
+- Never swallow errors with empty catch blocks. [B]
 
 For rationale and examples: [references/error-handling.md](references/error-handling.md)
 
 ## Immutability and Const
 
-- **Use `const` by default; use `let` only when reassignment is required.** [S]
-- **Never use `var`.** [S]
-- **Mark class properties `readonly` when they are not reassigned.** [M]
-- **Use `Readonly<T>` and `ReadonlyArray<T>` for function parameters.** [M]
-- **Do not export mutable bindings.** [M]
+- Use `const` by default; use `let` only when reassignment is required. [S]
+- Never use `var`. [S]
+- Mark class properties `readonly` when they are not reassigned. [M]
+- Use `Readonly<T>` and `ReadonlyArray<T>` for function parameters. [M]
+- Do not export mutable bindings. [M]
 
 For rationale and examples: [references/immutability.md](references/immutability.md)
 
 ## Module Organization
 
-- **Use named exports; ban default exports.** [M]
-- **Do not use barrel files (index.ts re-exports).** [M]
-- **Import from the source module, not through re-exports.** [M]
-- **Avoid circular dependencies between modules.** [B]
+- Use named exports; ban default exports. [M]
+- Do not use barrel files (index.ts re-exports). [M]
+- Import from the source module, not through re-exports. [M]
+- Avoid circular dependencies between modules. [B]
 
 For rationale and examples: [references/modules.md](references/modules.md)
 
 ## Naming Conventions
 
-- **Use PascalCase for types, camelCase for values, UPPER_CASE for constants.** [S]
-- **Do not prefix type names with `I`, `T`, or `E` (no Hungarian notation).** [S]
-- **Prefix boolean variables with `is`, `has`, `should`, or `can`.** [S]
+- Use PascalCase for types, camelCase for values, UPPER_CASE for constants. [S]
+- Do not prefix type names with `I`, `T`, or `E` (no Hungarian notation). [S]
+- Prefix boolean variables with `is`, `has`, `should`, or `can`. [S]
 
 For rationale and examples: [references/naming.md](references/naming.md)
 
 ## Discriminated Unions
 
-- **Use a single `type` or `kind` field as the discriminant property.** [M]
-- **Do not destructure discriminated unions before narrowing.** [B]
-- **Always handle all variants of a discriminated union exhaustively.** [B]
+- Use a single `type` or `kind` field as the discriminant property. [M]
+- Do not destructure discriminated unions before narrowing. [B]
+- Always handle all variants of a discriminated union exhaustively. [B]
 
 For rationale and examples: [references/discriminated-unions.md](references/discriminated-unions.md)
 
 ## Generics and Advanced Types
 
-- **Always constrain generic type parameters with `extends`.** [M]
-- **Do not add type parameters that are used only once.** [M]
-- **Use generics instead of function overloads when possible.** [M]
-- **Use `in`/`out` variance annotations on generic classes and interfaces.** [M]
-- **Use branded types for domain IDs and value objects.** [M]
+- Always constrain generic type parameters with `extends`. [M]
+- Do not add type parameters that are used only once. [M]
+- Use generics instead of function overloads when possible. [M]
+- Use `in`/`out` variance annotations on generic classes and interfaces. [M]
+- Use branded types for domain IDs and value objects. [M]
 
 For rationale and examples: [references/generics.md](references/generics.md)
 
 ## tsconfig and Advanced Pitfalls
 
-- **Enable `strict: true` and all strict family flags.** [B]
-- **Enable `noUncheckedIndexedAccess` for safe index access.** [B]
-- **Wrap conditional types in `[T]` to prevent unintended distribution over unions.** [B]
+- Enable `strict: true` and all strict family flags. [B]
+- Enable `noUncheckedIndexedAccess` for safe index access. [B]
+- Wrap conditional types in `[T]` to prevent unintended distribution over unions. [B]
 
 For rationale and examples: [references/tsconfig-advanced.md](references/tsconfig-advanced.md)
