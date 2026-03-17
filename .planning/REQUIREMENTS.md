@@ -46,11 +46,11 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### ESLint Plugin — Infrastructure
 
-- [ ] **LINT-01**: ESLint plugin targeting flat config only (ESLint v9+/v10)
+- [x] **LINT-01**: ESLint plugin targeting flat config only (ESLint v9+/v10)
 - [ ] **LINT-02**: Pre-built strict config preset (single import, all opinions as defaults)
 - [ ] **LINT-03**: Composable with existing typescript-eslint configs and other custom rules
 - [ ] **LINT-04**: Opinionated configuration of typescript-eslint strict-type-checked rules (naming-convention, consistent-type-definitions, no-explicit-any, etc.)
-- [ ] **LINT-05**: Published on npm as installable package
+- [x] **LINT-05**: Published on npm as installable package
 
 ### ESLint Plugin — Custom Rules
 
@@ -125,11 +125,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SKIL-19 | Phase 2 | Complete |
 | SKIL-20 | Phase 2 | Complete |
 | SKIL-21 | Phase 2 | Complete |
-| LINT-01 | Phase 3 | Pending |
+| LINT-01 | Phase 3 | Complete |
 | LINT-02 | Phase 3 | Pending |
 | LINT-03 | Phase 3 | Pending |
 | LINT-04 | Phase 3 | Pending |
-| LINT-05 | Phase 3 | Pending |
+| LINT-05 | Phase 3 | Complete |
 | LINT-06 | Phase 4 | Pending |
 | LINT-07 | Phase 4 | Pending |
 | LINT-08 | Phase 4 | Pending |
