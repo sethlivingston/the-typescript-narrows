@@ -27,11 +27,11 @@ type User = {
 
 ---
 
-## Ban enums; use `as const` objects with type unions
+## Ban enums (including `const enum`); use `as const` objects with type unions
 
-**Stance:** Do not use TypeScript enums. Use `as const` objects with derived type unions instead.
+**Stance:** Do not use TypeScript enums. Use `as const` objects with derived type unions instead. This includes `const enum`, which is additionally dangerous.
 
-**Why:** Enums generate runtime code, have surprising behaviors (reverse mappings on numeric enums, `const enum` inlining issues), and cannot be tree-shaken. `as const` objects are plain JavaScript with full type safety, work with every bundler, and produce predictable output.
+**Why:** Enums generate runtime code, have surprising behaviors (reverse mappings on numeric enums), and cannot be tree-shaken. `as const` objects are plain JavaScript with full type safety, work with every bundler, and produce predictable output. `const enum` is especially harmful: values are inlined at compile time, which breaks when declaration files are consumed by other packages (values disappear from the bundle, causing runtime errors). `--isolatedModules` (required by most modern bundlers) forbids `const enum` across files.
 
 **Do:**
 ```typescript
@@ -48,6 +48,14 @@ type Status = (typeof Status)[keyof typeof Status];
 enum Status {
   Active = "active",
   Inactive = "inactive",
+}
+
+// Especially dangerous:
+const enum Direction {
+  Up,
+  Down,
+  Left,
+  Right,
 }
 ```
 
@@ -107,32 +115,3 @@ function greet(user: User): string {
 }
 ```
 
----
-
-## Never use `const enum`
-
-**Stance:** Never use `const enum`. Use `as const` objects instead.
-
-**Why:** `const enum` values are inlined at compile time, which breaks when declaration files are consumed by other packages. The values disappear from the bundle, causing runtime errors in consumers. Additionally, `--isolatedModules` (required by most modern bundlers) forbids `const enum` across files.
-
-**Do:**
-```typescript
-const Direction = {
-  Up: 0,
-  Down: 1,
-  Left: 2,
-  Right: 3,
-} as const;
-
-type Direction = (typeof Direction)[keyof typeof Direction];
-```
-
-**Don't:**
-```typescript
-const enum Direction {
-  Up,
-  Down,
-  Left,
-  Right,
-}
-```

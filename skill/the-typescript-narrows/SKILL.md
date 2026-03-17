@@ -36,10 +36,9 @@ For rationale and examples: [references/type-safety.md](references/type-safety.m
 ## Type Declarations
 
 - Use interfaces for object shapes; use type aliases for unions, intersections, and utilities. [M]
-- Ban enums; use `as const` objects with type unions instead. [M]
+- Ban enums (including `const enum`); use `as const` objects with type unions instead. [B]
 - Do not use TypeScript namespaces; use ES modules. [M]
 - Use `import type` for type-only imports. [S]
-- Never use `const enum`; use plain `as const` objects. [B]
 
 For rationale and examples: [references/type-declarations.md](references/type-declarations.md)
 
