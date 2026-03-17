@@ -1,6 +1,6 @@
 # Opinion Index
 
-56 opinions organized by topic. Each links to its opinion file. Severity and enforcement shown per opinion.
+58 opinions organized by topic. Each links to its opinion file. Severity and enforcement shown per opinion.
 
 Severity: B = bug-prevention, M = maintenance, S = style | Enforcement: both, skill-only
 
@@ -52,6 +52,7 @@ Severity: B = bug-prevention, M = maintenance, S = style | Enforcement: both, sk
 - [result-over-throw](result-over-throw.md) -- Prefer Result types for expected failures, throw for bugs [M] [skill-only]
 - [error-discrimination](error-discrimination.md) -- Use discriminated union errors, not string messages [M] [skill-only]
 - [no-empty-catch](no-empty-catch.md) -- Do not silently swallow errors with empty catch blocks [B] [both]
+- [wrap-error-cause](wrap-error-cause.md) -- Wrap errors with cause when rethrowing [M] [skill-only]
 
 ## Control Flow
 
@@ -60,6 +61,7 @@ Severity: B = bug-prevention, M = maintenance, S = style | Enforcement: both, sk
 ## Functions
 
 - [prefer-arrow-functions](prefer-arrow-functions.md) -- Use arrow functions by default [S] [skill-only]
+- [accept-interfaces](accept-interfaces.md) -- Accept interfaces, return concrete types [M] [skill-only]
 
 ## Immutability & Const
 
@@ -110,6 +112,6 @@ Severity: B = bug-prevention, M = maintenance, S = style | Enforcement: both, sk
 
 ## Summary
 
-- **Total opinions:** 56
-- **Bug prevention:** 24 | **Maintenance:** 23 | **Style:** 9
-- **Both (skill + lint):** 37 | **Skill-only:** 19
+- **Total opinions:** 58
+- **Bug prevention:** 24 | **Maintenance:** 25 | **Style:** 9
+- **Both (skill + lint):** 37 | **Skill-only:** 21

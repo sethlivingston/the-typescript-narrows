@@ -77,6 +77,7 @@ For rationale and examples: [references/iteration.md](references/iteration.md)
 - Prefer Result types for expected failures; reserve throw for bugs. [M]
 - Use discriminated union errors for error categories, not string messages. [M]
 - Never swallow errors with empty catch blocks. [B]
+- Wrap errors with `{ cause: err }` when rethrowing; never discard the original error. [M]
 
 For rationale and examples: [references/error-handling.md](references/error-handling.md)
 
@@ -89,6 +90,7 @@ For rationale and examples: [references/control-flow.md](references/control-flow
 ## Functions
 
 - Use arrow functions by default; use function declarations only when hoisting is needed. [S]
+- Accept interfaces in function parameters; return concrete types. [M]
 
 For rationale and examples: [references/functions.md](references/functions.md)
 
