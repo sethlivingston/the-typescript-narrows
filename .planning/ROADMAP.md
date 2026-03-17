@@ -83,11 +83,11 @@ Plans:
   2. Every custom rule has a comprehensive test suite with 2-3x more valid (should-pass) cases than invalid cases, preventing false positive erosion of trust
   3. Custom rules are integrated into the plugin's preset configs and activate automatically when a user imports the recommended config
   4. Rule error messages reference the opinion rationale, telling the developer WHY the pattern is problematic
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 04-01: TBD
-- [ ] 04-02: TBD
+- [ ] 04-01-PLAN.md -- Implement ban-enums and ban-barrel-files rules with TDD test suites
+- [ ] 04-02-PLAN.md -- Wire rules into plugin registry, update strict preset and smoke tests
 
 ### Phase 5: Coverage Validation and Publishing
 **Goal**: Both artifacts are verified to cover all enumerated TypeScript ambiguities, and both are published to their respective registries
@@ -115,5 +115,5 @@ Note: Phases 2 and 3 depend only on Phase 1, not on each other.
 | 1. Opinion Foundation | 5/5 | Complete   | 2026-03-17 |
 | 2. Claude Skill | 4/5 | In Progress|  |
 | 3. ESLint Plugin Scaffold | 0/3 | Not started | - |
-| 4. Custom ESLint Rules | 0/? | Not started | - |
+| 4. Custom ESLint Rules | 0/2 | Not started | - |
 | 5. Coverage Validation and Publishing | 0/? | Not started | - |
