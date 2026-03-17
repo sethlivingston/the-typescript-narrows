@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Opinion Foundation** - Define the canonical opinion corpus that both artifacts derive from (completed 2026-03-17)
 - [ ] **Phase 2: Claude Skill** - Author the complete AI-agent-readable skill from the opinion corpus
 - [ ] **Phase 3: ESLint Plugin Scaffold** - Build and prove the plugin infrastructure before writing rules
-- [ ] **Phase 4: Custom ESLint Rules** - Implement custom rules and opinionated configs that distinguish the plugin
+- [x] **Phase 4: Custom ESLint Rules** - Implement custom rules and opinionated configs that distinguish the plugin (completed 2026-03-17)
 - [ ] **Phase 5: Coverage Validation and Publishing** - Validate cross-artifact coverage and ship both artifacts
 
 ## Phase Details
@@ -83,7 +83,7 @@ Plans:
   2. Every custom rule has a comprehensive test suite with 2-3x more valid (should-pass) cases than invalid cases, preventing false positive erosion of trust
   3. Custom rules are integrated into the plugin's preset configs and activate automatically when a user imports the recommended config
   4. Rule error messages reference the opinion rationale, telling the developer WHY the pattern is problematic
-**Plans:** 2 plans
+**Plans:** 2/2 plans complete
 
 Plans:
 - [ ] 04-01-PLAN.md -- Implement ban-enums and ban-barrel-files rules with TDD test suites
@@ -115,5 +115,5 @@ Note: Phases 2 and 3 depend only on Phase 1, not on each other.
 | 1. Opinion Foundation | 5/5 | Complete   | 2026-03-17 |
 | 2. Claude Skill | 4/5 | In Progress|  |
 | 3. ESLint Plugin Scaffold | 0/3 | Not started | - |
-| 4. Custom ESLint Rules | 0/2 | Not started | - |
+| 4. Custom ESLint Rules | 2/2 | Complete   | 2026-03-17 |
 | 5. Coverage Validation and Publishing | 0/? | Not started | - |
