@@ -7,7 +7,7 @@ import { createStrictConfig } from './configs/strict.js';
 const plugin: ESLint.Plugin = {
   meta: {
     name: 'eslint-plugin-typescript-narrows',
-    version: '0.1.0',
+    version: '0.9.0',
   },
   rules: rules as unknown as ESLint.Plugin['rules'],
   configs: {},

@@ -1,0 +1,44 @@
+# eslint-plugin-typescript-narrows
+
+Opinionated ESLint plugin for TypeScript -- one opinion per decision point.
+
+## Install
+
+```bash
+npm install --save-dev eslint-plugin-typescript-narrows
+```
+
+## Quick Start
+
+```js
+import tsnarrows from 'eslint-plugin-typescript-narrows';
+
+export default [
+  ...tsnarrows.configs.strict,
+  // your overrides
+];
+```
+
+## What's Included
+
+- 24 typescript-eslint rules configured to opinionated defaults
+- 3 ESLint core rules
+- 3 import-x rules
+- 2 custom rules (ban-enums, ban-barrel-files)
+
+32 rules total, enforcing 35 of the project's 59 opinions (some rules cover multiple opinions).
+
+## Custom Rules
+
+| Rule | Description | Auto-fixable |
+|------|-------------|:------------:|
+| `typescript-narrows/ban-enums` | Bans `enum` and `const enum` declarations in favor of `as const` objects | No |
+| `typescript-narrows/ban-barrel-files` | Bans barrel files (index.ts re-export files) | No |
+
+## Companion Skill
+
+This plugin pairs with [The TypeScript Narrows Claude Skill](../skill/the-typescript-narrows/SKILL.md), which provides all 59 opinions as structured guidance for AI-assisted development. The skill covers the 24 opinions that cannot be enforced through lint rules.
+
+## License
+
+[MIT](LICENSE)

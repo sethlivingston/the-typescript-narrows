@@ -1,7 +1,8 @@
 {
   "name": "eslint-plugin-typescript-narrows",
-  "version": "0.1.0",
+  "version": "0.9.0",
   "description": "Opinionated ESLint plugin for TypeScript — one opinion per decision point",
+  "license": "MIT",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -15,6 +16,22 @@
   },
   "files": [
     "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sethlivingston/the-typescript-narrows",
+    "directory": "eslint-plugin"
+  },
+  "homepage": "https://github.com/sethlivingston/the-typescript-narrows#readme",
+  "bugs": {
+    "url": "https://github.com/sethlivingston/the-typescript-narrows/issues"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "typescript",
+    "opinionated",
+    "lint"
   ],
   "engines": {
     "node": ">=18.18.0"
@@ -42,6 +59,7 @@
     "build": "tsup",
     "test": "vitest run",
     "test:watch": "vitest",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm run test"
   }
 }
