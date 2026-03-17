@@ -48,7 +48,7 @@ Plans:
   3. Every opinion includes a "why" rationale that the AI agent can relay to the developer when questioned
   4. The skill is framework and platform agnostic -- no React, Next.js, Express, or other framework-specific opinions appear anywhere
   5. The skill is structured for Claude skill registry publication (correct frontmatter, file layout, activation triggers)
-**Plans:** 5 plans
+**Plans:** 4/5 plans executed
 
 Plans:
 - [ ] 02-01-PLAN.md -- Create SKILL.md with frontmatter, preamble, and 50-opinion index
@@ -112,7 +112,7 @@ Note: Phases 2 and 3 depend only on Phase 1, not on each other.
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Opinion Foundation | 5/5 | Complete   | 2026-03-17 |
-| 2. Claude Skill | 0/5 | Not started | - |
+| 2. Claude Skill | 4/5 | In Progress|  |
 | 3. ESLint Plugin Scaffold | 0/? | Not started | - |
 | 4. Custom ESLint Rules | 0/? | Not started | - |
 | 5. Coverage Validation and Publishing | 0/? | Not started | - |

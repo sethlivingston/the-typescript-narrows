@@ -16,15 +16,15 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Claude Skill — Table Stakes Opinions
 
-- [ ] **SKIL-01**: Type vs interface opinion (interfaces for object shapes, types for unions/intersections/utilities)
-- [ ] **SKIL-02**: Enum stance (ban enums, prefer `as const` object + type union)
-- [ ] **SKIL-03**: `any` elimination (`unknown` everywhere, migration guidance)
-- [ ] **SKIL-04**: Type assertion restrictions (when assertions are legitimate, when not)
-- [ ] **SKIL-05**: Strict null handling and narrowing patterns (guard functions, exhaustive checks)
-- [ ] **SKIL-06**: Promise/async discipline (floating promises, misused promises, return-await)
+- [x] **SKIL-01**: Type vs interface opinion (interfaces for object shapes, types for unions/intersections/utilities)
+- [x] **SKIL-02**: Enum stance (ban enums, prefer `as const` object + type union)
+- [x] **SKIL-03**: `any` elimination (`unknown` everywhere, migration guidance)
+- [x] **SKIL-04**: Type assertion restrictions (when assertions are legitimate, when not)
+- [x] **SKIL-05**: Strict null handling and narrowing patterns (guard functions, exhaustive checks)
+- [x] **SKIL-06**: Promise/async discipline (floating promises, misused promises, return-await)
 - [ ] **SKIL-07**: `const` by default, naming conventions (camelCase, PascalCase rules)
 - [ ] **SKIL-08**: Named exports only (ban default exports, rationale)
-- [ ] **SKIL-09**: Strict tsconfig recommendations (`strict: true`, `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes`)
+- [x] **SKIL-09**: Strict tsconfig recommendations (`strict: true`, `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes`)
 - [x] **SKIL-10**: "Why" rationale included per opinion so AI agents can relay reasoning
 
 ### Claude Skill — Differentiator Opinions
@@ -104,15 +104,15 @@ Which phases cover which requirements. Updated during roadmap creation.
 | OPIN-02 | Phase 1 | Complete |
 | OPIN-03 | Phase 1 | Complete |
 | OPIN-04 | Phase 1 | Complete |
-| SKIL-01 | Phase 2 | Pending |
-| SKIL-02 | Phase 2 | Pending |
-| SKIL-03 | Phase 2 | Pending |
-| SKIL-04 | Phase 2 | Pending |
-| SKIL-05 | Phase 2 | Pending |
-| SKIL-06 | Phase 2 | Pending |
+| SKIL-01 | Phase 2 | Complete |
+| SKIL-02 | Phase 2 | Complete |
+| SKIL-03 | Phase 2 | Complete |
+| SKIL-04 | Phase 2 | Complete |
+| SKIL-05 | Phase 2 | Complete |
+| SKIL-06 | Phase 2 | Complete |
 | SKIL-07 | Phase 2 | Pending |
 | SKIL-08 | Phase 2 | Pending |
-| SKIL-09 | Phase 2 | Pending |
+| SKIL-09 | Phase 2 | Complete |
 | SKIL-10 | Phase 2 | Complete |
 | SKIL-11 | Phase 2 | Pending |
 | SKIL-12 | Phase 2 | Pending |
