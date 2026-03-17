@@ -5,7 +5,7 @@ milestone_name: milestone
 status: completed
 stopped_at: Completed quick/260317-ew7
 last_updated: "2026-03-17T15:46:28.739Z"
-last_activity: 2026-03-17 -- Completed 02-05 validation (all 50 opinions verified)
+last_activity: 2026-03-17 -- Completed quick task 260317-ew7: Remove bold formatting from SKILL.md opinion bullets and review for duplicates
 progress:
   total_phases: 5
   completed_phases: 2
@@ -28,7 +28,7 @@ See: .planning/PROJECT.md (updated 2026-03-16)
 Phase: 2 of 5 (Claude Skill)
 Plan: 5 of 5 in current phase (complete)
 Status: Phase 2 complete
-Last activity: 2026-03-17 -- Completed 02-05 validation (all 50 opinions verified)
+Last activity: 2026-03-17 -- Completed quick task 260317-ew7: Remove bold formatting and deduplicate SKILL.md
 
 Progress: [██████████] 100%
 
@@ -93,6 +93,12 @@ None yet.
 ### Blockers/Concerns
 
 None yet.
+
+### Quick Tasks Completed
+
+| # | Description | Date | Commit | Directory |
+|---|-------------|------|--------|-----------|
+| 260317-ew7 | Remove bold formatting from SKILL.md opinion bullets and review for duplicates | 2026-03-17 | c56d5f8 | [260317-ew7-remove-bold-formatting-from-skill-md-opi](./quick/260317-ew7-remove-bold-formatting-from-skill-md-opi/) |
 
 ## Session Continuity
 
