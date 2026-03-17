@@ -3,8 +3,8 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 01-04-PLAN.md
-last_updated: "2026-03-17T13:55:47.737Z"
+stopped_at: Completed 01-02-PLAN.md
+last_updated: "2026-03-17T13:56:03.696Z"
 last_activity: 2026-03-17 -- Completed 01-02 opinion authoring batch 1
 progress:
   total_phases: 5
@@ -68,6 +68,7 @@ Recent decisions affecting current work:
 - [Phase 01]: INDEX.md uses compact severity/enforcement notation ([B]/[M]/[S] and [both]/[skill-only])
 - [Phase 01]: ESLint core rules use unprefixed rule names; import plugin rules use import/ prefix
 - [Phase 01]: Skill-only opinions omit the lint field entirely rather than including an empty one
+- [Phase 01]: no-const-enum lint field set to type: custom since const enum ban is enforced as part of broader ban-enums custom rule
 
 ### Pending Todos
 
@@ -79,6 +80,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-17T13:55:47.735Z
-Stopped at: Completed 01-04-PLAN.md
+Last session: 2026-03-17T13:56:03.693Z
+Stopped at: Completed 01-02-PLAN.md
 Resume file: None
