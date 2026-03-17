@@ -69,22 +69,23 @@ describe('strict preset integration', () => {
     expect(ruleIds).toContain('no-console');
   });
 
-  it('reports placeholder custom rule violations when enabled', async () => {
-    const eslint = createESLintWithStrict([
-      {
-        rules: {
-          'typescript-narrows/placeholder': 'error',
-        },
-      },
-    ]);
-
+  it('reports ban-enums violations in strict preset', async () => {
+    const eslint = createESLintWithStrict();
     const results = await eslint.lintText(
-      `export function debug(): void { debugger; }\n`,
+      `export enum Status { Active, Inactive }\n`,
       { filePath: join(__dirname, 'test.ts') },
     );
+    const ruleIds = results[0].messages.map(m => m.ruleId);
+    expect(ruleIds).toContain('typescript-narrows/ban-enums');
+  });
 
-    const messages = results[0].messages;
-    const ruleIds = messages.map(m => m.ruleId);
-    expect(ruleIds).toContain('typescript-narrows/placeholder');
+  it('reports ban-barrel-files violations in strict preset', async () => {
+    const eslint = createESLintWithStrict();
+    const results = await eslint.lintText(
+      `export { User } from './user';\nexport { Order } from './order';\n`,
+      { filePath: join(__dirname, 'index.ts') },
+    );
+    const ruleIds = results[0].messages.map(m => m.ruleId);
+    expect(ruleIds).toContain('typescript-narrows/ban-barrel-files');
   });
 });
