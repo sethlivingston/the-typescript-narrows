@@ -1,0 +1,50 @@
+name: Release ESLint Plugin
+
+on:
+  push:
+    tags: ['eslint-plugin/v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install dependencies
+        working-directory: eslint-plugin
+        run: npm ci
+
+      - name: Build
+        working-directory: eslint-plugin
+        run: npm run build
+
+      - name: Test
+        working-directory: eslint-plugin
+        run: npm test
+
+      - name: Extract version from tag
+        id: version
+        run: echo "version=${GITHUB_REF_NAME#eslint-plugin/v}" >> "$GITHUB_OUTPUT"
+
+      - name: Publish to npm
+        working-directory: eslint-plugin
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Create GitHub Release
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            --title "ESLint Plugin v${{ steps.version.outputs.version }}" \
+            --generate-notes \
+            --notes-start-tag "$(git tag -l 'eslint-plugin/v*' --sort=-v:refname | sed -n '2p')"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
