@@ -1,17 +1,17 @@
-# eslint-plugin-typescript-narrows
+# @sethlivingston/eslint-plugin-typescript-narrows
 
 Opinionated ESLint plugin for TypeScript -- one opinion per decision point.
 
 ## Install
 
 ```bash
-npm install --save-dev eslint-plugin-typescript-narrows
+npm install --save-dev @sethlivingston/eslint-plugin-typescript-narrows
 ```
 
 ## Quick Start
 
 ```js
-import tsnarrows from 'eslint-plugin-typescript-narrows';
+import tsnarrows from '@sethlivingston/eslint-plugin-typescript-narrows';
 
 export default [
   ...tsnarrows.configs.strict,

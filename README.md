@@ -5,7 +5,7 @@ Opinionated TypeScript guidance that eliminates the "five ways to skin a cat" pr
 ## Artifacts
 
 - **Claude Skill** -- [`skill/the-typescript-narrows/`](skill/the-typescript-narrows/SKILL.md) provides all opinions as structured guidance for AI-assisted TypeScript development.
-- **ESLint Plugin** -- [`eslint-plugin-typescript-narrows`](eslint-plugin/) enforces over half of the opinions through lint rules, combining typescript-eslint configurations, import-x rules, and two custom rules.
+- **ESLint Plugin** -- [`@sethlivingston/eslint-plugin-typescript-narrows`](eslint-plugin/) enforces over half of the opinions through lint rules, combining typescript-eslint configurations, import-x rules, and two custom rules.
 
 ## Philosophy
 
