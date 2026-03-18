@@ -17,11 +17,29 @@ jobs:
         id: version
         run: echo "version=${GITHUB_REF_NAME#skill/v}" >> "$GITHUB_OUTPUT"
 
+      - name: Generate release notes
+        id: notes
+        run: |
+          PREV_TAG=$(git tag -l 'skill/v*' --sort=-v:refname | sed -n '2p')
+          if [ -n "$PREV_TAG" ]; then
+            RANGE="${PREV_TAG}..HEAD"
+          else
+            RANGE="HEAD"
+          fi
+          NOTES=$(git log "$RANGE" --pretty=format:"- %s" -- skill/ docs/opinions/)
+          if [ -z "$NOTES" ]; then
+            NOTES="- Maintenance release (no user-facing changes)"
+          fi
+          {
+            echo "notes<<EOF"
+            echo "$NOTES"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
       - name: Create GitHub Release
         run: |
           gh release create "$GITHUB_REF_NAME" \
             --title "Skill v${{ steps.version.outputs.version }}" \
-            --generate-notes \
-            --notes-start-tag "$(git tag -l 'skill/v*' --sort=-v:refname | sed -n '2p')"
+            --notes "${{ steps.notes.outputs.notes }}"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
