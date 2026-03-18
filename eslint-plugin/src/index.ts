@@ -6,7 +6,7 @@ import { createStrictConfig } from './configs/strict.js';
 // compatible with ESLint v10's RuleDefinition types, but they work at runtime.
 const plugin: ESLint.Plugin = {
   meta: {
-    name: 'eslint-plugin-typescript-narrows',
+    name: '@sethlivingston/eslint-plugin-typescript-narrows',
     version: '0.9.0',
   },
   rules: rules as unknown as ESLint.Plugin['rules'],

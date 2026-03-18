@@ -1,5 +1,5 @@
 {
-  "name": "eslint-plugin-typescript-narrows",
+  "name": "@sethlivingston/eslint-plugin-typescript-narrows",
   "version": "0.9.0",
   "description": "Opinionated ESLint plugin for TypeScript — one opinion per decision point",
   "license": "MIT",
