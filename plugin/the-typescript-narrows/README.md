@@ -1,4 +1,4 @@
-# The TypeScript Narrows (Claude Skill)
+# The TypeScript Narrows (Claude Plugin)
 
 Structured TypeScript opinions for AI-assisted development -- one opinion per decision point.
 
@@ -6,12 +6,12 @@ Structured TypeScript opinions for AI-assisted development -- one opinion per de
 
 **Option 1: Copy into your project**
 
-Copy the `skill/the-typescript-narrows/` directory into your project's `.claude/skills/` directory.
+Copy the `plugin/the-typescript-narrows/` directory into your project and reference it as a Claude Code plugin.
 
 **Option 2: Reference from GitHub**
 
 ```
-github:sethlivingston/the-typescript-narrows/skill/the-typescript-narrows
+github:sethlivingston/the-typescript-narrows/plugin/the-typescript-narrows
 ```
 
 ## What This Does

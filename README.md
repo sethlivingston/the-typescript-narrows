@@ -22,12 +22,12 @@ The Claude skill and the ESLint plugin extend [@typescript-eslint](https://www.n
 ## Repo Structure
 
 - **Opinions** -- The source of truth for both the Claude Skill and the ESLint plugin ([`docs/opinions/INDEX.md`](docs/opinions/INDEX.md))
-- **Claude Skill** -- All opinions structured for AI-assisted TypeScript development ([`skill/the-typescript-narrows/SKILL.md`](skill/the-typescript-narrows/SKILL.md))
+- **Claude Plugin** -- All opinions structured for AI-assisted TypeScript development ([`plugin/the-typescript-narrows/skills/the-typescript-narrows/SKILL.md`](plugin/the-typescript-narrows/skills/the-typescript-narrows/SKILL.md))
 - **ESLint Plugin** -- The subset of the opinions that can be enforced with ESLint rules, including typescript-eslint's strict rules and others ([`eslint-plugin/`](eslint/plugin))
 
 ## Getting Started
 
-**For AI-assisted development:** Add the Claude skill to your project so Claude follows these opinions when writing TypeScript. See [skill README](skill/the-typescript-narrows/README.md) for installation options.
+**For AI-assisted development:** Add the Claude plugin to your project so Claude follows these opinions when writing TypeScript. See [plugin README](plugin/the-typescript-narrows/README.md) for installation options.
 
 **For automated enforcement:** Install the ESLint plugin to lint against these opinions in CI and your editor. See [eslint-plugin README](eslint-plugin/README.md) for setup instructions.
 

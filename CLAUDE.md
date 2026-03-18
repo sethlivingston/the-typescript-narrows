@@ -7,7 +7,7 @@ Opinionated TypeScript guidance shipped as two independent artifacts from one mo
 ```
 docs/opinions/       Source-of-truth opinion corpus (markdown + frontmatter)
 docs/opinions/INDEX.md  Master index of all opinions
-skill/               Claude Skill — references all opinions for AI-assisted dev
+plugin/              Claude Plugin — references all opinions for AI-assisted dev
 eslint-plugin/       ESLint plugin (TypeScript, tsup, vitest)
 scripts/             generate-traceability.mjs — rebuilds docs/TRACEABILITY.md
 ```

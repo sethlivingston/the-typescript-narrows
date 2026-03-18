@@ -152,7 +152,7 @@ Determine the reference file from the topic group → reference file mapping:
 | Generics and Advanced Types | references/generics.md |
 | tsconfig and Advanced Pitfalls | references/tsconfig-advanced.md |
 
-If the topic group is new, create a new reference file at `skill/the-typescript-narrows/references/{new-topic}.md` with a `# {Topic Name}` heading.
+If the topic group is new, create a new reference file at `plugin/the-typescript-narrows/skills/the-typescript-narrows/references/{new-topic}.md` with a `# {Topic Name}` heading.
 
 Append to the reference file (with `---` separator before it):
 
@@ -182,7 +182,7 @@ Append to the reference file (with `---` separator before it):
 
 ### Step 4: Update SKILL.md
 
-Edit `skill/the-typescript-narrows/SKILL.md`:
+Edit `plugin/the-typescript-narrows/skills/the-typescript-narrows/SKILL.md`:
 
 1. Add bullet under the matching section (before the "For rationale and examples" line):
    ```

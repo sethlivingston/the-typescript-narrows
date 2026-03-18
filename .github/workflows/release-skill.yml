@@ -26,7 +26,7 @@ jobs:
           else
             RANGE="HEAD"
           fi
-          NOTES=$(git log "$RANGE" --pretty=format:"- %s" -- skill/ docs/opinions/)
+          NOTES=$(git log "$RANGE" --pretty=format:"- %s" -- plugin/ docs/opinions/)
           if [ -z "$NOTES" ]; then
             NOTES="- Maintenance release (no user-facing changes)"
           fi

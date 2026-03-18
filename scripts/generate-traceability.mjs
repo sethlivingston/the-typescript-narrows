@@ -110,7 +110,7 @@ function loadStrictRules() {
 // ---------------------------------------------------------------------------
 
 function loadSkillReferences() {
-  const refsDir = join(ROOT, 'skill', 'the-typescript-narrows', 'references');
+  const refsDir = join(ROOT, 'plugin', 'the-typescript-narrows', 'skills', 'the-typescript-narrows', 'references');
   const files = readdirSync(refsDir).filter(f => f.endsWith('.md'));
 
   const refs = [];

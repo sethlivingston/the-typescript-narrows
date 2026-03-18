@@ -35,9 +35,9 @@ export default [
 | `typescript-narrows/ban-enums` | Bans `enum` and `const enum` declarations in favor of `as const` objects | No |
 | `typescript-narrows/ban-barrel-files` | Bans barrel files (index.ts re-export files) | No |
 
-## Companion Skill
+## Companion Plugin
 
-This plugin pairs with [The TypeScript Narrows Claude Skill](../skill/the-typescript-narrows/SKILL.md), which provides all opinions as structured guidance for AI-assisted development. The skill covers the opinions that cannot be enforced through lint rules.
+This plugin pairs with [The TypeScript Narrows Claude Plugin](../plugin/the-typescript-narrows/skills/the-typescript-narrows/SKILL.md), which provides all opinions as structured guidance for AI-assisted development. The skill covers the opinions that cannot be enforced through lint rules.
 
 ## License
 
