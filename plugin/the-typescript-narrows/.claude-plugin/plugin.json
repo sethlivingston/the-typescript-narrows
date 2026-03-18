@@ -1,5 +1,13 @@
 {
   "name": "the-typescript-narrows",
   "description": "Opinionated TypeScript guidelines for AI-assisted development -- one opinion per decision point",
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "author": {
+    "name": "sethlivingston",
+    "url": "https://github.com/sethlivingston"
+  },
+  "homepage": "https://github.com/sethlivingston/the-typescript-narrows",
+  "repository": "https://github.com/sethlivingston/the-typescript-narrows",
+  "license": "MIT",
+  "keywords": ["typescript", "style-guide", "code-quality", "ai-coding", "claude-code"]
 }

@@ -1,8 +1,8 @@
-name: Release Skill
+name: Release Plugin
 
 on:
   push:
-    tags: ['skill/v*']
+    tags: ['plugin/v*']
 
 permissions:
   contents: write
@@ -15,12 +15,12 @@ jobs:
 
       - name: Extract version from tag
         id: version
-        run: echo "version=${GITHUB_REF_NAME#skill/v}" >> "$GITHUB_OUTPUT"
+        run: echo "version=${GITHUB_REF_NAME#plugin/v}" >> "$GITHUB_OUTPUT"
 
       - name: Generate release notes
         id: notes
         run: |
-          PREV_TAG=$(git tag -l 'skill/v*' --sort=-v:refname | sed -n '2p')
+          PREV_TAG=$(git tag -l 'plugin/v*' --sort=-v:refname | sed -n '2p')
           if [ -n "$PREV_TAG" ]; then
             RANGE="${PREV_TAG}..HEAD"
           else
@@ -39,7 +39,7 @@ jobs:
       - name: Create GitHub Release
         run: |
           gh release create "$GITHUB_REF_NAME" \
-            --title "Skill v${{ steps.version.outputs.version }}" \
+            --title "Plugin v${{ steps.version.outputs.version }}" \
             --notes "${{ steps.notes.outputs.notes }}"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

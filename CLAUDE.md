@@ -40,11 +40,11 @@ Use the `/release` slash command. Artifacts are versioned and released independe
 
 ```
 /release eslint-plugin 1.1.0        # release only the plugin
-/release skill 1.1.0                # release only the skill
-/release eslint-plugin 1.1.0 skill 1.1.0  # release both
+/release plugin 1.1.0                # release only the plugin
+/release eslint-plugin 1.1.0 plugin 1.1.0  # release both
 ```
 
-**Tag convention:** `eslint-plugin/v{semver}` and `skill/v{semver}`. Pushing a tag triggers the matching GitHub Actions workflow in `.github/workflows/`.
+**Tag convention:** `eslint-plugin/v{semver}` and `plugin/v{semver}`. Pushing a tag triggers the matching GitHub Actions workflow in `.github/workflows/`.
 
 **npm publishing** requires an `NPM_TOKEN` secret configured in the repo's GitHub settings.
 
