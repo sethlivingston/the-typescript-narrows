@@ -11,6 +11,14 @@ Opinionated TypeScript guidance that eliminates the "five ways to skin a cat" pr
 
 Every opinion follows "one opinion per decision point": given a TypeScript pattern where multiple valid approaches exist, this project picks one and explains why. Opinions are classified into three severity tiers -- Bug prevention (can cause runtime errors), Maintenance (makes code harder to work with over time), and Style (consistency with no functional impact).
 
+## Getting Started
+
+**For AI-assisted development:** Add the Claude skill to your project so Claude follows these opinions when writing TypeScript. See [skill README](skill/the-typescript-narrows/README.md) for installation options.
+
+**For automated enforcement:** Install the ESLint plugin to lint against these opinions in CI and your editor. See [eslint-plugin README](eslint-plugin/README.md) for setup instructions.
+
+Both artifacts work independently, but they're designed to complement each other -- the skill covers opinions that can't be expressed as lint rules.
+
 ## Coverage
 
 See [docs/TRACEABILITY.md](docs/TRACEABILITY.md) for the full traceability matrix mapping all opinions to their enforcement mechanisms.
