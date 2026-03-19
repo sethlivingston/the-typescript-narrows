@@ -116,6 +116,10 @@ Plans:
   2. `generate-traceability.mjs` runs without errors on the new directory structure
   3. All README links (root, eslint-plugin, plugin) resolve to correct paths
   4. `plugin.json` name field is consistent with `SKILL.md` name field
+**Plans:** 1 plan
+
+Plans:
+- [ ] 06-01-PLAN.md -- Fix all broken paths from skill rename and regenerate traceability
 
 ### Phase 7: Version Sync and Skill Completeness
 **Goal**: Sync the ESLint plugin meta.version and add the 2 missing opinions to SKILL.md
@@ -139,5 +143,5 @@ Note: Phases 2 and 3 depend only on Phase 1, not on each other.
 | 3. ESLint Plugin Scaffold | 0/3 | Not started | - |
 | 4. Custom ESLint Rules | 2/2 | Complete   | 2026-03-17 |
 | 5. Coverage Validation and Publishing | 0/2 | Not started | - |
-| 6. Fix Skill Rename Cascade | 0/0 | Not started | - |
+| 6. Fix Skill Rename Cascade | 0/1 | Not started | - |
 | 7. Version Sync and Skill Completeness | 0/0 | Not started | - |
