@@ -19,6 +19,8 @@ The TypeScript Narrows is a Claude Skill and an ESLint plugin that complement ea
 
 The Claude skill and the ESLint plugin extend [@typescript-eslint](https://www.npmjs.com/package/typescript-eslint) and cover over 50 opinions on type safety, error handling, async patters, naming conventions, and more.
 
+"The TypeScript Narrows" is a play on "The Deathly Hallows".
+
 ## Repo Structure
 
 - **Opinions** -- The source of truth for both the Claude Skill and the ESLint plugin ([`docs/opinions/INDEX.md`](docs/opinions/INDEX.md))
@@ -27,7 +29,12 @@ The Claude skill and the ESLint plugin extend [@typescript-eslint](https://www.n
 
 ## Getting Started
 
-**For AI-assisted development:** Add the Claude plugin to your project so Claude follows these opinions when writing TypeScript. See [plugin README](plugin/the-typescript-narrows/README.md) for installation options.
+**For AI-assisted development:** Install the Claude plugin from the marketplace:
+
+    claude plugin add-marketplace github:sethlivingston/claude-marketplace
+    claude plugin install the-typescript-narrows
+
+The skill triggers automatically when writing or reviewing TypeScript. See the [plugin README](plugin/the-typescript-narrows/README.md) for details.
 
 **For automated enforcement:** Install the ESLint plugin to lint against these opinions in CI and your editor. See [eslint-plugin README](eslint-plugin/README.md) for setup instructions.
 
