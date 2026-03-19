@@ -1,6 +1,6 @@
 # @sethlivingston/eslint-plugin-typescript-narrows
 
-Opinionated ESLint plugin for TypeScript -- one opinion per decision point.
+Opinionated ESLint plugin for TypeScript
 
 ## Install
 
@@ -11,7 +11,7 @@ npm install --save-dev @sethlivingston/eslint-plugin-typescript-narrows
 ## Quick Start
 
 ```js
-import tsnarrows from '@sethlivingston/eslint-plugin-typescript-narrows';
+import tsnarrows from "@sethlivingston/eslint-plugin-typescript-narrows";
 
 export default [
   ...tsnarrows.configs.strict,
@@ -30,14 +30,14 @@ export default [
 
 ## Custom Rules
 
-| Rule | Description | Auto-fixable |
-|------|-------------|:------------:|
-| `typescript-narrows/ban-enums` | Bans `enum` and `const enum` declarations in favor of `as const` objects | No |
-| `typescript-narrows/ban-barrel-files` | Bans barrel files (index.ts re-export files) | No |
+| Rule                                  | Description                                                              | Auto-fixable |
+| ------------------------------------- | ------------------------------------------------------------------------ | :----------: |
+| `typescript-narrows/ban-enums`        | Bans `enum` and `const enum` declarations in favor of `as const` objects |      No      |
+| `typescript-narrows/ban-barrel-files` | Bans barrel files (index.ts re-export files)                             |      No      |
 
 ## Companion Plugin
 
-This plugin pairs with [The TypeScript Narrows Claude Plugin](../plugin/the-typescript-narrows/skills/the-typescript-narrows/SKILL.md), which provides all opinions as structured guidance for AI-assisted development. The skill covers the opinions that cannot be enforced through lint rules.
+This plugin pairs with [The TypeScript Narrows Claude Plugin](../plugin/the-typescript-narrows/skills/typescript-narrows/SKILL.md), which provides all opinions as structured guidance for AI-assisted development. The skill covers the opinions that cannot be enforced through lint rules.
 
 ## License
 

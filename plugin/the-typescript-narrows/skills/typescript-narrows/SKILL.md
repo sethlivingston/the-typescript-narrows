@@ -1,5 +1,5 @@
 ---
-name: the-typescript-narrows
+name: typescript-narrows
 description: Provides a single, well-reasoned TypeScript opinion for every common decision point. Eliminates the "multiple ways to do it" problem when writing, refactoring, or reviewing TypeScript code. Use when generating TypeScript, performing TypeScript code review, or deciding between multiple valid TypeScript patterns.
 ---
 
@@ -13,11 +13,11 @@ Apply these opinions when writing new TypeScript code, refactoring existing code
 
 **Severity tiers** indicate impact level:
 
-| Tag | Tier | Meaning |
-|-----|------|---------|
+| Tag | Tier           | Meaning                                                             |
+| --- | -------------- | ------------------------------------------------------------------- |
 | [B] | Bug prevention | Can cause runtime errors, data corruption, or silent wrong behavior |
-| [M] | Maintenance | Makes code harder to understand, refactor, or extend over time |
-| [S] | Style | Consistency and readability with no functional impact |
+| [M] | Maintenance    | Makes code harder to understand, refactor, or extend over time      |
+| [S] | Style          | Consistency and readability with no functional impact               |
 
 **Exception clause:** All opinions allow exceptions when there is no other viable alternative. If you must deviate, document why in a code comment. Convenience alone is not a valid exception.
 
