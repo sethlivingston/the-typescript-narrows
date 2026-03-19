@@ -39,10 +39,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Claude Skill — Format & Distribution
 
-- [x] **SKIL-18**: Skill is pure markdown with YAML frontmatter following Anthropic skill spec
-- [x] **SKIL-19**: SKILL.md under 500 lines using progressive disclosure (index + reference files)
+- [ ] **SKIL-18**: Skill is pure markdown with YAML frontmatter following Anthropic skill spec
+- [ ] **SKIL-19**: SKILL.md under 500 lines using progressive disclosure (index + reference files)
 - [x] **SKIL-20**: Framework and platform agnostic — no React, Next, Express, etc. opinions
-- [x] **SKIL-21**: Publishable to Claude skill registry/marketplace
+- [ ] **SKIL-21**: Publishable to Claude skill registry/marketplace
 
 ### ESLint Plugin — Infrastructure
 
@@ -50,7 +50,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **LINT-02**: Pre-built strict config preset (single import, all opinions as defaults)
 - [x] **LINT-03**: Composable with existing typescript-eslint configs and other custom rules
 - [x] **LINT-04**: Opinionated configuration of typescript-eslint strict-type-checked rules (naming-convention, consistent-type-definitions, no-explicit-any, etc.)
-- [x] **LINT-05**: Published on npm as installable package
+- [ ] **LINT-05**: Published on npm as installable package
 
 ### ESLint Plugin — Custom Rules
 
@@ -60,9 +60,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Coverage Validation
 
-- [x] **COVR-01**: All 50 enumerated TS ambiguities/gotchas from OPIN-01 are addressed by either the skill, a lint rule, or both
-- [x] **COVR-02**: Each item in the 50-item list has a traceability entry showing which artifact(s) address it
-- [x] **COVR-03**: Lint rules only exist where static analysis makes sense — no forced automation of guidance-only opinions
+- [ ] **COVR-01**: All 50 enumerated TS ambiguities/gotchas from OPIN-01 are addressed by either the skill, a lint rule, or both
+- [ ] **COVR-02**: Each item in the 50-item list has a traceability entry showing which artifact(s) address it
+- [ ] **COVR-03**: Lint rules only exist where static analysis makes sense — no forced automation of guidance-only opinions
 
 ## v2 Requirements
 
@@ -121,21 +121,21 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SKIL-15 | Phase 2 | Complete |
 | SKIL-16 | Phase 2 | Complete |
 | SKIL-17 | Phase 2 | Complete |
-| SKIL-18 | Phase 2 | Complete |
-| SKIL-19 | Phase 2 | Complete |
+| SKIL-18 | Phase 6 | Pending |
+| SKIL-19 | Phase 7 | Pending |
 | SKIL-20 | Phase 2 | Complete |
-| SKIL-21 | Phase 2 | Complete |
+| SKIL-21 | Phase 6 | Pending |
 | LINT-01 | Phase 3 | Complete |
 | LINT-02 | Phase 3 | Complete |
 | LINT-03 | Phase 3 | Complete |
 | LINT-04 | Phase 3 | Complete |
-| LINT-05 | Phase 3 | Complete |
+| LINT-05 | Phase 7 | Pending |
 | LINT-06 | Phase 4 | Complete |
 | LINT-07 | Phase 4 | Complete |
 | LINT-08 | Phase 4 | Complete |
-| COVR-01 | Phase 5 | Complete |
-| COVR-02 | Phase 5 | Complete |
-| COVR-03 | Phase 5 | Complete |
+| COVR-01 | Phase 6 | Pending |
+| COVR-02 | Phase 6 | Pending |
+| COVR-03 | Phase 6 | Pending |
 
 **Coverage:**
 - v1 requirements: 36 total
@@ -144,4 +144,4 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 ---
 *Requirements defined: 2026-03-16*
-*Last updated: 2026-03-16 after roadmap creation*
+*Last updated: 2026-03-19 after gap closure phase creation*

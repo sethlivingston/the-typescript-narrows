@@ -17,6 +17,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] **Phase 3: ESLint Plugin Scaffold** - Build and prove the plugin infrastructure before writing rules
 - [x] **Phase 4: Custom ESLint Rules** - Implement custom rules and opinionated configs that distinguish the plugin (completed 2026-03-17)
 - [ ] **Phase 5: Coverage Validation and Publishing** - Validate cross-artifact coverage and ship both artifacts
+- [ ] **Phase 6: Fix Skill Rename Cascade** - Commit skill rename and fix all broken paths/links (gap closure)
+- [ ] **Phase 7: Version Sync and Skill Completeness** - Sync meta.version and add 2 missing skill opinions (gap closure)
 
 ## Phase Details
 
@@ -104,6 +106,26 @@ Plans:
 - [ ] 05-01-PLAN.md -- Build traceability script and validate coverage across all 59 opinions
 - [ ] 05-02-PLAN.md -- Add LICENSE files, READMEs, version bump, package metadata, and verify publish readiness
 
+### Phase 6: Fix Skill Rename Cascade
+**Goal**: Commit the skill directory rename and fix all broken paths, links, and scripts that cascaded from it
+**Depends on**: Phase 5
+**Requirements**: COVR-01, COVR-02, COVR-03, SKIL-18, SKIL-21
+**Gap Closure:** Closes INT-01, INT-02, INT-03, INT-04, INT-05, FLOW-02 (partial), FLOW-03
+**Success Criteria** (what must be TRUE):
+  1. The skill directory rename from `the-typescript-narrows` to `typescript-narrows` is committed atomically with all path updates
+  2. `generate-traceability.mjs` runs without errors on the new directory structure
+  3. All README links (root, eslint-plugin, plugin) resolve to correct paths
+  4. `plugin.json` name field is consistent with `SKILL.md` name field
+
+### Phase 7: Version Sync and Skill Completeness
+**Goal**: Sync the ESLint plugin meta.version and add the 2 missing opinions to SKILL.md
+**Depends on**: Phase 6
+**Requirements**: LINT-05, SKIL-19
+**Gap Closure:** Closes INT-06, INT-07, FLOW-02 (remaining)
+**Success Criteria** (what must be TRUE):
+  1. `eslint-plugin/src/index.ts` meta.version matches `eslint-plugin/package.json` version
+  2. SKILL.md lists all 59 corpus opinions with corresponding reference file entries
+
 ## Progress
 
 **Execution Order:**
@@ -117,3 +139,5 @@ Note: Phases 2 and 3 depend only on Phase 1, not on each other.
 | 3. ESLint Plugin Scaffold | 0/3 | Not started | - |
 | 4. Custom ESLint Rules | 2/2 | Complete   | 2026-03-17 |
 | 5. Coverage Validation and Publishing | 0/2 | Not started | - |
+| 6. Fix Skill Rename Cascade | 0/0 | Not started | - |
+| 7. Version Sync and Skill Completeness | 0/0 | Not started | - |
