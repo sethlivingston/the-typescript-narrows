@@ -4,15 +4,16 @@ Structured TypeScript opinions for AI-assisted development -- one opinion per de
 
 ## Install
 
-**Option 1: Copy into your project**
+Add the marketplace, then install the plugin:
 
-Copy the `plugin/the-typescript-narrows/` directory into your project and reference it as a Claude Code plugin.
+    claude plugin add-marketplace github:sethlivingston/claude-marketplace
+    claude plugin install the-typescript-narrows
 
-**Option 2: Reference from GitHub**
+The skill triggers automatically when Claude generates TypeScript, reviews TypeScript code, or decides between multiple valid TypeScript patterns.
 
-```
-github:sethlivingston/the-typescript-narrows/plugin/the-typescript-narrows
-```
+**Alternative: Reference from GitHub directly**
+
+    github:sethlivingston/the-typescript-narrows/plugin/the-typescript-narrows
 
 ## What This Does
 
