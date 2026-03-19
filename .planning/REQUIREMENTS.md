@@ -39,10 +39,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Claude Skill — Format & Distribution
 
-- [ ] **SKIL-18**: Skill is pure markdown with YAML frontmatter following Anthropic skill spec
+- [x] **SKIL-18**: Skill is pure markdown with YAML frontmatter following Anthropic skill spec
 - [ ] **SKIL-19**: SKILL.md under 500 lines using progressive disclosure (index + reference files)
 - [x] **SKIL-20**: Framework and platform agnostic — no React, Next, Express, etc. opinions
-- [ ] **SKIL-21**: Publishable to Claude skill registry/marketplace
+- [x] **SKIL-21**: Publishable to Claude skill registry/marketplace
 
 ### ESLint Plugin — Infrastructure
 
@@ -60,9 +60,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Coverage Validation
 
-- [ ] **COVR-01**: All 50 enumerated TS ambiguities/gotchas from OPIN-01 are addressed by either the skill, a lint rule, or both
-- [ ] **COVR-02**: Each item in the 50-item list has a traceability entry showing which artifact(s) address it
-- [ ] **COVR-03**: Lint rules only exist where static analysis makes sense — no forced automation of guidance-only opinions
+- [x] **COVR-01**: All 50 enumerated TS ambiguities/gotchas from OPIN-01 are addressed by either the skill, a lint rule, or both
+- [x] **COVR-02**: Each item in the 50-item list has a traceability entry showing which artifact(s) address it
+- [x] **COVR-03**: Lint rules only exist where static analysis makes sense — no forced automation of guidance-only opinions
 
 ## v2 Requirements
 
@@ -121,10 +121,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SKIL-15 | Phase 2 | Complete |
 | SKIL-16 | Phase 2 | Complete |
 | SKIL-17 | Phase 2 | Complete |
-| SKIL-18 | Phase 6 | Pending |
+| SKIL-18 | Phase 6 | Complete |
 | SKIL-19 | Phase 7 | Pending |
 | SKIL-20 | Phase 2 | Complete |
-| SKIL-21 | Phase 6 | Pending |
+| SKIL-21 | Phase 6 | Complete |
 | LINT-01 | Phase 3 | Complete |
 | LINT-02 | Phase 3 | Complete |
 | LINT-03 | Phase 3 | Complete |
@@ -133,9 +133,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | LINT-06 | Phase 4 | Complete |
 | LINT-07 | Phase 4 | Complete |
 | LINT-08 | Phase 4 | Complete |
-| COVR-01 | Phase 6 | Pending |
-| COVR-02 | Phase 6 | Pending |
-| COVR-03 | Phase 6 | Pending |
+| COVR-01 | Phase 6 | Complete |
+| COVR-02 | Phase 6 | Complete |
+| COVR-03 | Phase 6 | Complete |
 
 **Coverage:**
 - v1 requirements: 36 total
