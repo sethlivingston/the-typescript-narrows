@@ -129,6 +129,10 @@ Plans:
 **Success Criteria** (what must be TRUE):
   1. `eslint-plugin/src/index.ts` meta.version matches `eslint-plugin/package.json` version
   2. SKILL.md lists all 59 corpus opinions with corresponding reference file entries
+**Plans:** 1 plan
+
+Plans:
+- [ ] 07-01-PLAN.md -- Version sync via tsup define and add 2 missing SKILL.md opinions
 
 ## Progress
 
@@ -144,4 +148,4 @@ Note: Phases 2 and 3 depend only on Phase 1, not on each other.
 | 4. Custom ESLint Rules | 2/2 | Complete   | 2026-03-17 |
 | 5. Coverage Validation and Publishing | 0/2 | Not started | - |
 | 6. Fix Skill Rename Cascade | 0/1 | Not started | - |
-| 7. Version Sync and Skill Completeness | 0/0 | Not started | - |
+| 7. Version Sync and Skill Completeness | 0/1 | Not started | - |
