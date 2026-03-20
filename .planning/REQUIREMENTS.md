@@ -40,7 +40,7 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Claude Skill — Format & Distribution
 
 - [x] **SKIL-18**: Skill is pure markdown with YAML frontmatter following Anthropic skill spec
-- [ ] **SKIL-19**: SKILL.md under 500 lines using progressive disclosure (index + reference files)
+- [x] **SKIL-19**: SKILL.md under 500 lines using progressive disclosure (index + reference files)
 - [x] **SKIL-20**: Framework and platform agnostic — no React, Next, Express, etc. opinions
 - [x] **SKIL-21**: Publishable to Claude skill registry/marketplace
 
@@ -50,7 +50,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **LINT-02**: Pre-built strict config preset (single import, all opinions as defaults)
 - [x] **LINT-03**: Composable with existing typescript-eslint configs and other custom rules
 - [x] **LINT-04**: Opinionated configuration of typescript-eslint strict-type-checked rules (naming-convention, consistent-type-definitions, no-explicit-any, etc.)
-- [ ] **LINT-05**: Published on npm as installable package
+- [x] **LINT-05**: Published on npm as installable package
 
 ### ESLint Plugin — Custom Rules
 
@@ -122,14 +122,14 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SKIL-16 | Phase 2 | Complete |
 | SKIL-17 | Phase 2 | Complete |
 | SKIL-18 | Phase 6 | Complete |
-| SKIL-19 | Phase 7 | Pending |
+| SKIL-19 | Phase 7 | Complete |
 | SKIL-20 | Phase 2 | Complete |
 | SKIL-21 | Phase 6 | Complete |
 | LINT-01 | Phase 3 | Complete |
 | LINT-02 | Phase 3 | Complete |
 | LINT-03 | Phase 3 | Complete |
 | LINT-04 | Phase 3 | Complete |
-| LINT-05 | Phase 7 | Pending |
+| LINT-05 | Phase 7 | Complete |
 | LINT-06 | Phase 4 | Complete |
 | LINT-07 | Phase 4 | Complete |
 | LINT-08 | Phase 4 | Complete |
