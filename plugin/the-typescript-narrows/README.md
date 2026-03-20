@@ -21,7 +21,7 @@ This skill provides over 50 opinionated TypeScript guidelines covering type safe
 
 ## Companion ESLint Plugin
 
-For automated enforcement of over half of these opinions, use the [`eslint-plugin-typescript-narrows`](https://www.npmjs.com/package/eslint-plugin-typescript-narrows) npm package.
+For automated enforcement of over half of these opinions, use the [`@sethlivingston/eslint-plugin-typescript-narrows`](https://www.npmjs.com/package/@sethlivingston/eslint-plugin-typescript-narrows) npm package.
 
 ## License
 

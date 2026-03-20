@@ -130,35 +130,42 @@ function isSkillCovered(opinion, refs) {
   const idPattern = opinion.id.toLowerCase();
   const titleClean = stripMarkdown(opinion.title).toLowerCase();
 
+  // Phase 1: Exact ID match (highest confidence)
   for (const ref of refs) {
     const contentClean = stripMarkdown(ref.content);
-
-    // Match by opinion ID (kebab-case)
     if (contentClean.includes(idPattern)) {
       return ref.file;
     }
+  }
 
-    // Match by cleaned title
+  // Phase 2: Exact title match
+  for (const ref of refs) {
+    const contentClean = stripMarkdown(ref.content);
     if (contentClean.includes(titleClean)) {
       return ref.file;
     }
+  }
 
-    // Match by significant title words (3+ word overlap from title in a single heading)
-    // Extract H2 headings from the reference
+  // Phase 3: Best heading match across ALL refs (pick highest overlap ratio)
+  let bestMatch = null;
+  let bestRatio = 0;
+
+  for (const ref of refs) {
     const headings = ref.content.match(/^## .+$/gm) || [];
     for (const heading of headings) {
       const headingClean = stripMarkdown(heading.replace(/^## /, '')).toLowerCase();
-      // Check if the heading and title share enough content
-      // Strategy: check if key words from opinion title appear in heading
       const titleTokens = titleClean.split(/\s+/).filter(w => w.length > 2);
+      if (titleTokens.length === 0) continue;
       const matchCount = titleTokens.filter(t => headingClean.includes(t)).length;
-      if (titleTokens.length > 0 && matchCount >= Math.min(3, titleTokens.length)) {
-        return ref.file;
+      const ratio = matchCount / titleTokens.length;
+      if (matchCount >= Math.min(3, titleTokens.length) && ratio > bestRatio) {
+        bestRatio = ratio;
+        bestMatch = ref.file;
       }
     }
   }
 
-  return null;
+  return bestMatch;
 }
 
 // ---------------------------------------------------------------------------
