@@ -2,7 +2,7 @@
 
 ## What This Is
 
-An opinionated TypeScript guidance ecosystem for AI coding agents. It consists of a Claude skill that AI agents consult when generating or refactoring TypeScript code — providing strong opinions on patterns, pitfalls, and practices — plus an ESLint plugin that mechanically enforces the automatable subset of those opinions. Framework and platform agnostic.
+An opinionated TypeScript guidance ecosystem shipped as two independent artifacts: a Claude skill (59 opinions in progressive-disclosure markdown) that AI coding agents consult when generating or refactoring TypeScript, plus an ESLint plugin (`@sethlivingston/eslint-plugin-typescript-narrows`) that mechanically enforces the 35 automatable opinions via a strict preset built on typescript-eslint. Framework and platform agnostic.
 
 ## Core Value
 
@@ -12,13 +12,16 @@ Eliminate the "5 ways to skin a cat" problem in TypeScript by providing a single
 
 ### Validated
 
-- [x] Claude skill with comprehensive TypeScript opinions — Validated in Phases 1-2
-- [x] ESLint plugin enforcing the automatable subset of skill opinions — Validated in Phases 3-5
-- [x] Lint rules composable with other custom rules (standard ESLint plugin architecture) — Validated in Phase 3
-- [x] Building on typescript-eslint strict config as a foundation — Validated in Phase 3
-- [x] Skill and plugin paths consistent after directory restructuring — Validated in Phase 6
-- [x] ESLint plugin meta.version synced with package.json via build-time injection — Validated in Phase 7
-- [x] SKILL.md covers all 59 corpus opinions — Validated in Phase 7
+- ✓ 59-opinion TypeScript corpus with severity tiers and enforcement tags — v1.0
+- ✓ Claude skill with comprehensive TypeScript opinions (SKILL.md + 15 reference files) — v1.0
+- ✓ ESLint plugin enforcing the automatable subset of skill opinions — v1.0
+- ✓ Lint rules composable with other custom rules (standard ESLint plugin architecture) — v1.0
+- ✓ Building on typescript-eslint strict config as a foundation — v1.0
+- ✓ Custom ban-enums and ban-barrel-files rules covering gaps no existing plugin addresses — v1.0
+- ✓ Full traceability matrix mapping all 59 opinions to skill sections and/or lint rules — v1.0
+- ✓ Skill and plugin paths consistent after directory restructuring — v1.0
+- ✓ ESLint plugin meta.version synced with package.json via build-time injection — v1.0
+- ✓ SKILL.md covers all 59 corpus opinions — v1.0
 
 ### Active
 
@@ -34,11 +37,14 @@ Eliminate the "5 ways to skin a cat" problem in TypeScript by providing a single
 
 ## Context
 
-- The TypeScript ecosystem suffers from too many valid approaches to the same problem (interfaces vs types, enums vs const objects, namespace patterns, error handling styles, etc.)
-- AI coding agents amplify this inconsistency because they draw from diverse training data and produce different patterns across sessions
-- A Claude skill is a markdown-based instruction set that AI agents load when relevant, shaping how they write code
-- typescript-eslint's strict config provides a solid foundation but doesn't cover all the opinion areas needed
-- Matt Pocock's ts-reset is adjacent art (fixes TS built-in types) but different in scope — this project is about coding patterns and practices, not type definitions
+Shipped v1.0 with 553 LOC TypeScript, 61 opinion corpus files, 17 plugin markdown files.
+Tech stack: TypeScript, tsup, Vitest, ESLint v10, @typescript-eslint v8.
+Both artifacts are structured for independent release: plugin via prefixed git tags (`plugin/v*`) and eslint-plugin via npm (`eslint-plugin/v*`).
+
+Known cosmetic tech debt:
+- Plugin README npm URL uses unscoped package name
+- Traceability script attributes 5 opinions to wrong skill reference file (coverage status correct)
+- Dead code in generate-traceability.mjs line 227
 
 ## Constraints
 
@@ -51,10 +57,15 @@ Eliminate the "5 ways to skin a cat" problem in TypeScript by providing a single
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| No scaffolding — guidance only | Skill should shape AI behavior, not generate boilerplate | — Pending |
-| ESLint before Oxlint | ESLint has broader adoption; prove opinions first, then port | — Pending |
-| Build on typescript-eslint strict | Don't reinvent existing good opinions; extend and fill gaps | — Pending |
-| Comprehensive v1 | Full opinion set + matching lint rules for all automatable opinions | — Pending |
+| No scaffolding — guidance only | Skill should shape AI behavior, not generate boilerplate | ✓ Good |
+| ESLint before Oxlint | ESLint has broader adoption; prove opinions first, then port | ✓ Good |
+| Build on typescript-eslint strict | Don't reinvent existing good opinions; extend and fill gaps | ✓ Good |
+| Comprehensive v1 | Full opinion set + matching lint rules for all automatable opinions | ✓ Good |
+| Opinion corpus as single source of truth | Both skill and plugin derive from docs/opinions/ | ✓ Good |
+| Progressive disclosure in skill | SKILL.md index + 15 reference files keeps main file under 500 lines | ✓ Good |
+| tsup define for version injection | Build-time constant avoids runtime file reads | ✓ Good |
+| Flat config only (ESLint v9+/v10) | No legacy .eslintrc support reduces maintenance burden | ✓ Good |
+| Skill-only for non-automatable opinions | 24 opinions marked skill-only where static analysis impractical | ✓ Good |
 
 ---
-*Last updated: 2026-03-19 after Phase 7 completion*
+*Last updated: 2026-03-20 after v1.0 milestone*
