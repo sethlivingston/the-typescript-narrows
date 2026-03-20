@@ -25,7 +25,7 @@ The Claude skill and the ESLint plugin extend [@typescript-eslint](https://www.n
 
 - **Opinions** -- The source of truth for both the Claude Skill and the ESLint plugin ([`docs/opinions/INDEX.md`](docs/opinions/INDEX.md))
 - **Claude Plugin** -- All opinions structured for AI-assisted TypeScript development ([`plugin/the-typescript-narrows/skills/typescript-narrows/SKILL.md`](plugin/the-typescript-narrows/skills/typescript-narrows/SKILL.md))
-- **ESLint Plugin** -- The subset of the opinions that can be enforced with ESLint rules, including typescript-eslint's strict rules and others ([`eslint-plugin/`](eslint/plugin))
+- **ESLint Plugin** -- The subset of the opinions that can be enforced with ESLint rules, including typescript-eslint's strict rules and others ([`eslint-plugin/`](eslint-plugin/))
 
 ## Getting Started
 

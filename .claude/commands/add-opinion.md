@@ -150,6 +150,7 @@ Determine the reference file from the topic group → reference file mapping:
 | Naming Conventions | references/naming.md |
 | Discriminated Unions | references/discriminated-unions.md |
 | Generics and Advanced Types | references/generics.md |
+| Resource Management | references/resource-management.md |
 | tsconfig and Advanced Pitfalls | references/tsconfig-advanced.md |
 
 If the topic group is new, create a new reference file at `plugin/the-typescript-narrows/skills/typescript-narrows/references/{new-topic}.md` with a `# {Topic Name}` heading.
