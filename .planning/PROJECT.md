@@ -17,10 +17,11 @@ Eliminate the "5 ways to skin a cat" problem in TypeScript by providing a single
 - [x] Lint rules composable with other custom rules (standard ESLint plugin architecture) — Validated in Phase 3
 - [x] Building on typescript-eslint strict config as a foundation — Validated in Phase 3
 - [x] Skill and plugin paths consistent after directory restructuring — Validated in Phase 6
+- [x] ESLint plugin meta.version synced with package.json via build-time injection — Validated in Phase 7
+- [x] SKILL.md covers all 59 corpus opinions — Validated in Phase 7
 
 ### Active
 
-- [ ] Do's and don'ts covering both well-known gotchas (any vs unknown, == vs ===, type assertions, enums) and advanced pitfalls (variance, conditional type distribution, declaration merging)
 - [ ] Skill publishable to Claude skill registry/marketplace
 - [ ] Lint rules publishable on npm
 
@@ -56,4 +57,4 @@ Eliminate the "5 ways to skin a cat" problem in TypeScript by providing a single
 | Comprehensive v1 | Full opinion set + matching lint rules for all automatable opinions | — Pending |
 
 ---
-*Last updated: 2026-03-19 after Phase 6 completion*
+*Last updated: 2026-03-19 after Phase 7 completion*
