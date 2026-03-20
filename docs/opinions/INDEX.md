@@ -25,7 +25,6 @@ Severity: B = bug-prevention, M = maintenance, S = style | Enforcement: both, sk
 
 ## Null Handling & Narrowing
 
-- [exhaustive-switch](exhaustive-switch.md) -- Handle all cases in discriminated union switches [B] [both]
 - [prefer-optional-chaining](prefer-optional-chaining.md) -- Use optional chaining over manual null checks [S] [both]
 - [no-unnecessary-condition](no-unnecessary-condition.md) -- Do not write conditions that are always true or false [B] [both]
 - [prefer-nullish-coalescing](prefer-nullish-coalescing.md) -- Use `??` instead of `||` for nullish fallbacks [B] [both]
@@ -89,6 +88,7 @@ Severity: B = bug-prevention, M = maintenance, S = style | Enforcement: both, sk
 - [single-discriminant](single-discriminant.md) -- Use a single `type` or `kind` field as discriminant [M] [skill-only]
 - [no-destructure-before-narrow](no-destructure-before-narrow.md) -- Do not destructure discriminated unions before narrowing [B] [skill-only]
 - [exhaustive-discrimination](exhaustive-discrimination.md) -- Always handle all variants of a discriminated union [B] [both]
+- [exhaustive-switch](exhaustive-switch.md) -- Handle all cases in discriminated union switches [B] [both]
 
 ## Generics & Advanced Types
 

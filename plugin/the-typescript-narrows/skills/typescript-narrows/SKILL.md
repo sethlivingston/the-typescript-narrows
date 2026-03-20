@@ -38,6 +38,7 @@ For rationale and examples: [references/type-safety.md](references/type-safety.m
 - Use interfaces for object shapes; use type aliases for unions, intersections, and utilities. [M]
 - Ban enums (including `const enum`); use `as const` objects with type unions instead. [B]
 - Do not use TypeScript namespaces; use ES modules. [M]
+- Never use `const enum`; they break isolatedModules and have cross-project pitfalls. [B]
 - Use `import type` for type-only imports. [S]
 - Require explicit return types on exported functions; internal functions can rely on inference. [M]
 
@@ -126,6 +127,7 @@ For rationale and examples: [references/naming.md](references/naming.md)
 - Use a single `type` or `kind` field as the discriminant property. [M]
 - Do not destructure discriminated unions before narrowing. [B]
 - Always handle all variants of a discriminated union exhaustively. [B]
+- Handle all cases in discriminated union switches; use a `never` default to catch missing variants. [B]
 
 For rationale and examples: [references/discriminated-unions.md](references/discriminated-unions.md)
 
