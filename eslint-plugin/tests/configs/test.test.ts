@@ -42,4 +42,27 @@ describe('test config preset', () => {
     expect(allRules['@typescript-eslint/require-await']).toBe('off');
     expect(allRules['@typescript-eslint/no-floating-promises']).toBe('error');
   });
+
+  it('does not share nested config objects with the strict preset', () => {
+    const strict = (plugin.configs as Record<string, unknown>).strict as Array<Record<string, unknown>>;
+    const testConfig = (plugin.configs as Record<string, unknown>).test as Array<Record<string, unknown>>;
+    const strictConfigWithRules = strict.find(config => config.rules !== undefined);
+    const scopedConfigWithRules = testConfig.find(
+      config => config.files !== undefined && config.rules !== undefined,
+    );
+    const strictConfigWithLanguageOptions = strict.find(config => config.languageOptions !== undefined);
+    const scopedConfigWithLanguageOptions = testConfig.find(
+      config => config.files !== undefined && config.languageOptions !== undefined,
+    );
+
+    expect(testConfig).toHaveLength(strict.length + 1);
+    expect(strictConfigWithRules).toBeDefined();
+    expect(scopedConfigWithRules).toBeDefined();
+    expect(strictConfigWithLanguageOptions).toBeDefined();
+    expect(scopedConfigWithLanguageOptions).toBeDefined();
+    expect(scopedConfigWithRules?.rules).not.toBe(strictConfigWithRules?.rules);
+    expect(scopedConfigWithLanguageOptions?.languageOptions).not.toBe(
+      strictConfigWithLanguageOptions?.languageOptions,
+    );
+  });
 });
