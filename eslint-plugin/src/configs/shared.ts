@@ -1,5 +1,19 @@
 import type { Linter } from 'eslint';
 
+function clonePlainValue<T>(value: T): T {
+  if (Array.isArray(value)) {
+    return value.map(entry => clonePlainValue(entry)) as T;
+  }
+
+  if (value !== null && typeof value === 'object') {
+    return Object.fromEntries(
+      Object.entries(value).map(([key, entry]) => [key, clonePlainValue(entry)]),
+    ) as T;
+  }
+
+  return value;
+}
+
 export function scopeConfigsToFiles(
   configs: readonly Linter.Config[],
   files: readonly string[],
@@ -15,15 +29,17 @@ export function scopeConfigsToFiles(
         ...config.languageOptions,
         ...(config.languageOptions.globals === undefined
           ? {}
-          : { globals: { ...config.languageOptions.globals } }),
+          : { globals: clonePlainValue(config.languageOptions.globals) }),
         ...(config.languageOptions.parserOptions === undefined
           ? {}
-          : { parserOptions: { ...config.languageOptions.parserOptions } }),
+          : {
+            parserOptions: clonePlainValue(config.languageOptions.parserOptions),
+          }),
       };
     }
 
     if (config.linterOptions !== undefined) {
-      scopedConfig.linterOptions = { ...config.linterOptions };
+      scopedConfig.linterOptions = clonePlainValue(config.linterOptions);
     }
 
     if (config.plugins !== undefined) {
@@ -31,11 +47,11 @@ export function scopeConfigsToFiles(
     }
 
     if (config.rules !== undefined) {
-      scopedConfig.rules = { ...config.rules };
+      scopedConfig.rules = clonePlainValue(config.rules);
     }
 
     if (config.settings !== undefined) {
-      scopedConfig.settings = { ...config.settings };
+      scopedConfig.settings = clonePlainValue(config.settings);
     }
 
     return scopedConfig;

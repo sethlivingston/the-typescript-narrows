@@ -1,5 +1,7 @@
+import type { Linter } from 'eslint';
 import { describe, it, expect } from 'vitest';
 import plugin from '../../src/index.js';
+import { scopeConfigsToFiles } from '../../src/configs/shared.js';
 
 describe('test config preset', () => {
   it('exports a test config as an array', () => {
@@ -44,25 +46,33 @@ describe('test config preset', () => {
   });
 
   it('does not share nested config objects with the strict preset', () => {
-    const strict = (plugin.configs as Record<string, unknown>).strict as Array<Record<string, unknown>>;
-    const testConfig = (plugin.configs as Record<string, unknown>).test as Array<Record<string, unknown>>;
-    const strictConfigWithRules = strict.find(config => config.rules !== undefined);
-    const scopedConfigWithRules = testConfig.find(
-      config => config.files !== undefined && config.rules !== undefined,
-    );
-    const strictConfigWithLanguageOptions = strict.find(config => config.languageOptions !== undefined);
-    const scopedConfigWithLanguageOptions = testConfig.find(
-      config => config.files !== undefined && config.languageOptions !== undefined,
-    );
+    const originalConfig: Linter.Config[] = [
+      {
+        languageOptions: {
+          parserOptions: {
+            projectService: {
+              allowDefaultProject: ['*.ts'],
+            },
+          },
+        },
+        rules: {
+          'no-console': 'error',
+        },
+      },
+    ];
+    const [scopedConfig] = scopeConfigsToFiles(originalConfig, ['**/*.test.ts']);
+    const originalParserOptions = (
+      originalConfig[0].languageOptions as { parserOptions?: { projectService?: { allowDefaultProject?: string[] } } }
+    ).parserOptions;
+    const scopedParserOptions = (
+      scopedConfig.languageOptions as { parserOptions?: { projectService?: { allowDefaultProject?: string[] } } }
+    ).parserOptions;
 
-    expect(testConfig).toHaveLength(strict.length + 1);
-    expect(strictConfigWithRules).toBeDefined();
-    expect(scopedConfigWithRules).toBeDefined();
-    expect(strictConfigWithLanguageOptions).toBeDefined();
-    expect(scopedConfigWithLanguageOptions).toBeDefined();
-    expect(scopedConfigWithRules?.rules).not.toBe(strictConfigWithRules?.rules);
-    expect(scopedConfigWithLanguageOptions?.languageOptions).not.toBe(
-      strictConfigWithLanguageOptions?.languageOptions,
+    expect(scopedConfig.rules).not.toBe(originalConfig[0].rules);
+    expect(scopedParserOptions).not.toBe(originalParserOptions);
+    expect(scopedParserOptions?.projectService).not.toBe(originalParserOptions?.projectService);
+    expect(scopedParserOptions?.projectService?.allowDefaultProject).not.toBe(
+      originalParserOptions?.projectService?.allowDefaultProject,
     );
   });
 });
