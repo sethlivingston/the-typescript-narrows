@@ -1,6 +1,8 @@
 import type { ESLint } from 'eslint';
 import { rules } from './rules/index.js';
 import { createStrictConfig } from './configs/strict.js';
+import { createTestConfig } from './configs/test.js';
+import { createToolingConfig } from './configs/tooling.js';
 
 // Replaced at build time by tsup define
 declare const PACKAGE_VERSION: string;
@@ -19,6 +21,8 @@ const plugin: ESLint.Plugin = {
 // Self-reference: configs need to reference the plugin object
 Object.assign(plugin.configs!, {
   strict: createStrictConfig(plugin),
+  test: createTestConfig(plugin),
+  tooling: createToolingConfig(plugin),
 });
 
 export default plugin;

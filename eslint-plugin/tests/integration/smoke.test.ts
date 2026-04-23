@@ -21,7 +21,29 @@ function createESLintWithStrict(
         languageOptions: {
           parserOptions: {
             projectService: {
-              allowDefaultProject: ['*.ts'],
+              allowDefaultProject: ['*.ts', '*.tsx'],
+            },
+            tsconfigRootDir: __dirname,
+          },
+        },
+      },
+    ],
+  });
+}
+
+function createESLintWithConfigs(
+  configs: ESLint.ConfigData[],
+  allowDefaultProject: string[] = ['*.ts', '*.tsx'],
+): ESLint {
+  return new ESLint({
+    overrideConfigFile: true,
+    overrideConfig: [
+      ...configs,
+      {
+        languageOptions: {
+          parserOptions: {
+            projectService: {
+              allowDefaultProject,
             },
             tsconfigRootDir: __dirname,
           },
@@ -87,5 +109,82 @@ describe('strict preset integration', () => {
     );
     const ruleIds = results[0].messages.map(m => m.ruleId);
     expect(ruleIds).toContain('typescript-narrows/ban-barrel-files');
+  });
+});
+
+describe('test preset integration', () => {
+  it('relaxes ceremony-heavy rules in test files while keeping no-floating-promises enabled', async () => {
+    const strict = (plugin.configs as Record<string, unknown>)
+      .strict as ESLint.ConfigData[];
+    const testConfig = (plugin.configs as Record<string, unknown>)
+      .test as ESLint.ConfigData[];
+    const eslint = createESLintWithConfigs([...strict, ...testConfig]);
+
+    const results = await eslint.lintText(
+      `import { expect, it } from 'vitest';
+
+it('works', async () => {
+  const subject = (input: { value: string }) => {
+    input.value = 'next';
+  };
+
+  subject({ value: 'first' });
+  Promise.resolve('done');
+  expect(1).toBe(1);
+});
+`,
+      { filePath: join(__dirname, 'example.spec.tsx') },
+    );
+
+    const ruleIds = results[0].messages.map(m => m.ruleId);
+
+    expect(ruleIds).not.toContain('@typescript-eslint/explicit-function-return-type');
+    expect(ruleIds).not.toContain('@typescript-eslint/prefer-readonly-parameter-types');
+    expect(ruleIds).not.toContain('@typescript-eslint/require-await');
+    expect(ruleIds).toContain('@typescript-eslint/no-floating-promises');
+  });
+});
+
+describe('tooling preset integration', () => {
+  it('allows default exports for tooling entrypoints', async () => {
+    const strict = (plugin.configs as Record<string, unknown>)
+      .strict as ESLint.ConfigData[];
+    const tooling = (plugin.configs as Record<string, unknown>)
+      .tooling as ESLint.ConfigData[];
+    const eslint = createESLintWithConfigs([...strict, ...tooling]);
+
+    const results = await eslint.lintText(
+      `export default {
+  test: {
+    globals: true,
+  },
+};
+`,
+      { filePath: join(__dirname, 'vitest.config.ts') },
+    );
+
+    const ruleIds = results[0].messages.map(m => m.ruleId);
+
+    expect(ruleIds).not.toContain('import/no-default-export');
+  });
+
+  it('keeps default exports disallowed for ordinary source files', async () => {
+    const strict = (plugin.configs as Record<string, unknown>)
+      .strict as ESLint.ConfigData[];
+    const tooling = (plugin.configs as Record<string, unknown>)
+      .tooling as ESLint.ConfigData[];
+    const eslint = createESLintWithConfigs([...strict, ...tooling]);
+
+    const results = await eslint.lintText(
+      `export default function greet(): string {
+  return 'hi';
+}
+`,
+      { filePath: join(__dirname, 'source.ts') },
+    );
+
+    const ruleIds = results[0].messages.map(m => m.ruleId);
+
+    expect(ruleIds).toContain('import/no-default-export');
   });
 });
