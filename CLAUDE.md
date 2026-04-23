@@ -46,7 +46,7 @@ Use the `/release` slash command. Artifacts are versioned and released independe
 
 **Tag convention:** `eslint-plugin/v{semver}` and `plugin/v{semver}`. Pushing a tag triggers the matching GitHub Actions workflow in `.github/workflows/`.
 
-**npm publishing** requires an `NPM_TOKEN` secret configured in the repo's GitHub settings.
+**npm publishing** uses npm trusted publishing via GitHub Actions OIDC. Configure the npm package to trust this repository's release workflow before publishing.
 
 ## Traceability
 
