@@ -48,6 +48,8 @@ Use the `/release` slash command. Artifacts are versioned and released independe
 
 **npm publishing** uses npm trusted publishing via GitHub Actions OIDC. Configure the npm package to trust this repository's release workflow before publishing.
 
+**Release hardening:** Protect the `main` branch and the `eslint-plugin/v*` and `plugin/v*` tag namespaces. Configure the `npm-publish` GitHub Environment with required reviewers before automated npm publishing, and keep GitHub Actions pinned by full commit SHA.
+
 ## Traceability
 
 After adding or changing opinions, regenerate the traceability matrix:
