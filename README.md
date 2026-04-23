@@ -36,7 +36,13 @@ The Claude skill and the ESLint plugin extend [@typescript-eslint](https://www.n
 
 The skill triggers automatically when writing or reviewing TypeScript. See the [plugin README](plugin/the-typescript-narrows/README.md) for details.
 
-**For automated enforcement:** Install the ESLint plugin to lint against these opinions in CI and your editor. See [eslint-plugin README](eslint-plugin/README.md) for setup instructions.
+**For automated enforcement:** Install [`@sethlivingston/eslint-plugin-typescript-narrows`](https://www.npmjs.com/package/@sethlivingston/eslint-plugin-typescript-narrows) to lint against these opinions in CI and your editor:
+
+```bash
+npm install --save-dev @sethlivingston/eslint-plugin-typescript-narrows
+```
+
+See [eslint-plugin README](eslint-plugin/README.md) for setup instructions.
 
 Both artifacts work independently, but they're designed to complement each other -- the skill covers opinions that can't be expressed as lint rules.
 
