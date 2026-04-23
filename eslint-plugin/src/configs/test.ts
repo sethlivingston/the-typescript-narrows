@@ -5,12 +5,20 @@ import { scopeConfigsToFiles } from './shared.js';
 const testFiles = [
   '**/*.test.ts',
   '**/*.test.tsx',
+  '**/*.test.mts',
+  '**/*.test.cts',
   '**/*.spec.ts',
   '**/*.spec.tsx',
+  '**/*.spec.mts',
+  '**/*.spec.cts',
   '**/__tests__/**/*.ts',
   '**/__tests__/**/*.tsx',
+  '**/__tests__/**/*.mts',
+  '**/__tests__/**/*.cts',
   'tests/**/*.ts',
   'tests/**/*.tsx',
+  'tests/**/*.mts',
+  'tests/**/*.cts',
 ] as const satisfies readonly string[];
 
 export function createTestConfig(plugin: ESLint.Plugin): Linter.Config[] {

@@ -19,8 +19,12 @@ describe('test config preset', () => {
     expect(files).toContain('**/*.spec.ts');
     expect(files).toContain('**/*.test.tsx');
     expect(files).toContain('**/*.spec.tsx');
+    expect(files).toContain('**/*.test.mts');
+    expect(files).toContain('**/*.spec.cts');
     expect(files).toContain('tests/**/*.ts');
     expect(files).toContain('tests/**/*.tsx');
+    expect(files).toContain('tests/**/*.mts');
+    expect(files).toContain('tests/**/*.cts');
   });
 
   it('relaxes the selected ceremony-heavy rules for tests', () => {
