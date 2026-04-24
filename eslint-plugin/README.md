@@ -34,6 +34,8 @@ Use the presets together in that order:
 | `configs.test` | Test files and test helpers | Relaxes ceremony-heavy rules like explicit return types, readonly parameter types, and `require-await`, while keeping safety rules like `no-floating-promises` |
 | `configs.tooling` | Tooling and config entrypoints | Keeps strict behavior but turns off `import/no-default-export` for conventional config files |
 
+The strict preset also allows build-time injected constants that follow `^__[_A-Z0-9]+__$`, including declared globals and object-literal `define` maps.
+
 ## What's Included
 
 - 20+ typescript-eslint rules configured to opinionated defaults

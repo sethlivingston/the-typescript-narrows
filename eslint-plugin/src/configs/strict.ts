@@ -2,6 +2,8 @@ import tseslint from 'typescript-eslint';
 import importPlugin from 'eslint-plugin-import-x';
 import type { ESLint, Linter } from 'eslint';
 
+const INJECTED_CONSTANT_REGEX = '^__[_A-Z0-9]+__$'
+
 export function createStrictConfig(plugin: ESLint.Plugin): Linter.Config[] {
   return [
     ...tseslint.configs.strictTypeChecked,
@@ -62,6 +64,17 @@ export function createStrictConfig(plugin: ESLint.Plugin): Linter.Config[] {
         '@typescript-eslint/strict-boolean-expressions': 'error',
         '@typescript-eslint/naming-convention': [
           'error',
+          {
+            selector: 'variable',
+            modifiers: ['const', 'global'],
+            filter: { regex: INJECTED_CONSTANT_REGEX, match: true },
+            format: null,
+          },
+          {
+            selector: 'objectLiteralProperty',
+            filter: { regex: INJECTED_CONSTANT_REGEX, match: true },
+            format: null,
+          },
           { selector: 'default', format: ['camelCase'] },
           { selector: 'variable', format: ['camelCase', 'UPPER_CASE'] },
           {

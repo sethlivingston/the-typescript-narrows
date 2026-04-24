@@ -110,6 +110,24 @@ describe('strict preset integration', () => {
     const ruleIds = results[0].messages.map(m => m.ruleId);
     expect(ruleIds).toContain('typescript-narrows/ban-barrel-files');
   });
+
+  it('allows __NAME__ build-time injected constants in strict preset', async () => {
+    const eslint = createESLintWithStrict();
+    const results = await eslint.lintText(
+      `declare const __ONEWAY_HTTP_EXPECTED_ROOT_TARGET__: 'browser' | 'node';
+
+export const define = {
+  __ONEWAY_HTTP_EXPECTED_ROOT_TARGET__: JSON.stringify('browser'),
+};
+
+export const expectedRootTarget = __ONEWAY_HTTP_EXPECTED_ROOT_TARGET__;
+`,
+      { filePath: join(__dirname, 'injected-constants.ts') },
+    );
+
+    const ruleIds = results[0].messages.map(m => m.ruleId);
+    expect(ruleIds).not.toContain('@typescript-eslint/naming-convention');
+  });
 });
 
 describe('test preset integration', () => {
