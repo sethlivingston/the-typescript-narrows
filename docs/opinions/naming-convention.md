@@ -13,7 +13,7 @@ lint:
 
 ## Stance
 
-Use PascalCase for types, interfaces, classes, and enums. Use camelCase for variables, functions, methods, and parameters. Use UPPER_CASE for module-level constants.
+Use PascalCase for types, interfaces, classes, and enums. Use camelCase for variables, functions, methods, and parameters. Use UPPER_CASE for module-level constants. For build-time injected constants supplied by tooling, `__NAME__` is also allowed.
 
 ## Why
 
@@ -28,6 +28,7 @@ interface UserProfile {
 
 const maxRetries = 3;
 const MAX_TIMEOUT = 5000;
+declare const __APP_RUNTIME_TARGET__: 'browser' | 'node';
 
 function formatName(user: UserProfile): string {
   return user.displayName;
