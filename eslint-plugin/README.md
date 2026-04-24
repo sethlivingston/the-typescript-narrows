@@ -15,9 +15,24 @@ import tsnarrows from "@sethlivingston/eslint-plugin-typescript-narrows";
 
 export default [
   ...tsnarrows.configs.strict,
-  // your overrides
+  ...tsnarrows.configs.test,
+  ...tsnarrows.configs.tooling,
 ];
 ```
+
+Use the presets together in that order:
+
+- `strict` for ordinary source files
+- `test` for `*.test.*`, `*.spec.*`, `__tests__/`, and `tests/` helpers
+- `tooling` for config entrypoints such as `eslint.config.ts`, `vite.config.ts`, `vitest.config.ts`, and `tsup.config.ts`
+
+## Presets
+
+| Preset | Intended files | Notes |
+| ------ | -------------- | ----- |
+| `configs.strict` | Source code | Main strict preset for production and library code |
+| `configs.test` | Test files and test helpers | Relaxes ceremony-heavy rules like explicit return types, readonly parameter types, and `require-await`, while keeping safety rules like `no-floating-promises` |
+| `configs.tooling` | Tooling and config entrypoints | Keeps strict behavior but turns off `import/no-default-export` for conventional config files |
 
 ## What's Included
 
