@@ -39,14 +39,16 @@ Use the `/add-opinion` slash command. It walks through creating the corpus file,
 Use the `/release` slash command. Artifacts are versioned and released independently via prefixed git tags.
 
 ```
-/release eslint-plugin 1.1.0        # release only the plugin
+/release eslint-plugin 1.1.0        # release only the ESLint plugin
 /release plugin 1.1.0                # release only the plugin
 /release eslint-plugin 1.1.0 plugin 1.1.0  # release both
 ```
 
+**Protected-main release flow:** do not push release commits directly to `main`. For `eslint-plugin` releases, bump `eslint-plugin/package.json` on a branch, validate it, open and merge the PR, then fast-forward local `main` and push only the release tag(s). For `plugin`-only releases, tag the desired commit already on `main`.
+
 **Tag convention:** `eslint-plugin/v{semver}` and `plugin/v{semver}`. Pushing a tag triggers the matching GitHub Actions workflow in `.github/workflows/`.
 
-**npm publishing** uses npm trusted publishing via GitHub Actions OIDC. Configure the npm package to trust this repository's release workflow before publishing.
+**npm publishing** uses npm trusted publishing via GitHub Actions OIDC. Configure the npm package to trust this repository's release workflow before publishing; no long-lived `NPM_TOKEN` repository secret should be required.
 
 **Release hardening:** Protect the `main` branch and the `eslint-plugin/v*` and `plugin/v*` tag namespaces. Configure the `npm-publish` GitHub Environment with required reviewers before automated npm publishing, and keep GitHub Actions pinned by full commit SHA.
 
