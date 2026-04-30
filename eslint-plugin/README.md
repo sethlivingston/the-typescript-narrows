@@ -76,8 +76,8 @@ The release is triggered by pushing a git tag with the format `eslint-plugin/v{V
 **To release a new version:**
 
 1. Update `eslint-plugin/package.json` with the new version (e.g., `"version": "1.2.0"`)
-2. Commit and push the version bump to `main`
-3. Create and push a tag: `git tag eslint-plugin/v1.2.0 && git push origin eslint-plugin/v1.2.0`
+2. Commit the version bump on a branch, open a PR, and merge it to `main`
+3. From the merged commit on `main`, create and push a tag: `git tag eslint-plugin/v1.2.0 && git push origin eslint-plugin/v1.2.0`
 
 ### Workflows
 
