@@ -17,11 +17,9 @@ jobs:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           persist-credentials: false
-          fetch-depth: 0
 
       - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e
         with:
-          cache: npm
           node-version: '24'
           registry-url: 'https://registry.npmjs.org/'
 
@@ -29,9 +27,17 @@ jobs:
         working-directory: eslint-plugin
         run: npm ci
 
-      - name: Verify package
+      - name: Build
         working-directory: eslint-plugin
-        run: npm run verify
+        run: npm run build
+
+      - name: Test
+        working-directory: eslint-plugin
+        run: npm test
+
+      - name: Typecheck
+        working-directory: eslint-plugin
+        run: npm run typecheck
 
   publish:
     needs: validate
@@ -45,11 +51,9 @@ jobs:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           persist-credentials: false
-          fetch-depth: 0
 
       - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e
         with:
-          cache: npm
           node-version: '24'
           registry-url: 'https://registry.npmjs.org/'
 
