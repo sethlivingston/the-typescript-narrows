@@ -56,6 +56,34 @@ The strict preset also allows build-time injected constants that follow `^__[_A-
 
 This plugin pairs with [The TypeScript Narrows Claude Plugin](../plugin/the-typescript-narrows/skills/typescript-narrows/SKILL.md), which provides all opinions as structured guidance for AI-assisted development. The skill covers the opinions that cannot be enforced through lint rules.
 
+## Development & Release
+
+### Prerequisites
+
+The ESLint plugin package uses automated release workflows. To publish a release, you must:
+
+1. Ensure all changes are committed and pushed to `main`
+2. Have npm package version updated in `eslint-plugin/package.json`
+3. Have permission to push tags to the repository
+4. Have the `npm-publish` GitHub environment configured with:
+   - Trusted publishing enabled (OIDC with npm)
+   - Appropriate npm permissions for `@sethlivingston/eslint-plugin-typescript-narrows`
+
+### Release Process
+
+The release is triggered by pushing a git tag with the format `eslint-plugin/v{VERSION}`, where `{VERSION}` matches the `version` field in `eslint-plugin/package.json`.
+
+**To release a new version:**
+
+1. Update `eslint-plugin/package.json` with the new version (e.g., `"version": "1.2.0"`)
+2. Commit and push the version bump to `main`
+3. Create and push a tag: `git tag eslint-plugin/v1.2.0 && git push origin eslint-plugin/v1.2.0`
+
+### Workflows
+
+- **CI Workflow** (`.github/workflows/ci-eslint-plugin.yml`): Runs on pull requests and pushes to main, validating the package builds, passes tests, and typechecks successfully
+- **Release Workflow** (`.github/workflows/release-eslint-plugin.yml`): Triggered by tags matching `eslint-plugin/v*`, performs validation and publishes to npm with provenance, then creates a GitHub release with auto-generated release notes
+
 ## License
 
 [MIT](LICENSE)
