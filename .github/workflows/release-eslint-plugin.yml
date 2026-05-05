@@ -109,8 +109,10 @@ jobs:
 
       - name: Create GitHub Release
         run: |
+          printf '%s' "$RELEASE_NOTES" > /tmp/release-notes.md
           gh release create "$GITHUB_REF_NAME" \
             --title "ESLint Plugin v${{ steps.version.outputs.version }}" \
-            --notes "${{ steps.notes.outputs.notes }}"
+            --notes-file /tmp/release-notes.md
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_NOTES: ${{ steps.notes.outputs.notes }}
