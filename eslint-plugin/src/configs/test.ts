@@ -28,7 +28,6 @@ export function createTestConfig(plugin: ESLint.Plugin): Linter.Config[] {
       files: [...testFiles],
       rules: {
         '@typescript-eslint/explicit-function-return-type': 'off',
-        '@typescript-eslint/prefer-readonly-parameter-types': 'off',
         '@typescript-eslint/require-await': 'off',
       },
     },

@@ -40,7 +40,6 @@ describe('test config preset', () => {
     }
 
     expect(allRules['@typescript-eslint/explicit-function-return-type']).toBe('off');
-    expect(allRules['@typescript-eslint/prefer-readonly-parameter-types']).toBe('off');
     expect(allRules['@typescript-eslint/require-await']).toBe('off');
     expect(allRules['@typescript-eslint/no-floating-promises']).toBe('error');
   });

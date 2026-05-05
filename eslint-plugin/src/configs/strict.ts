@@ -57,10 +57,6 @@ export function createStrictConfig(plugin: ESLint.Plugin): Linter.Config[] {
         ],
         '@typescript-eslint/explicit-function-return-type': 'error',
         '@typescript-eslint/prefer-readonly': 'error',
-        '@typescript-eslint/prefer-readonly-parameter-types': [
-          'error',
-          { allow: [], treatMethodsAsReadonly: true },
-        ],
         '@typescript-eslint/strict-boolean-expressions': 'error',
         '@typescript-eslint/naming-convention': [
           'error',
@@ -73,6 +69,11 @@ export function createStrictConfig(plugin: ESLint.Plugin): Linter.Config[] {
           {
             selector: 'objectLiteralProperty',
             filter: { regex: INJECTED_CONSTANT_REGEX, match: true },
+            format: null,
+          },
+          {
+            selector: 'objectLiteralProperty',
+            modifiers: ['requiresQuotes'],
             format: null,
           },
           { selector: 'default', format: ['camelCase'] },
