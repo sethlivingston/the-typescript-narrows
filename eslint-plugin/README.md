@@ -31,10 +31,12 @@ Use the presets together in that order:
 | Preset | Intended files | Notes |
 | ------ | -------------- | ----- |
 | `configs.strict` | Source code | Main strict preset for production and library code |
-| `configs.test` | Test files and test helpers | Relaxes ceremony-heavy rules like explicit return types, readonly parameter types, and `require-await`, while keeping safety rules like `no-floating-promises` |
+| `configs.test` | Test files and test helpers | Relaxes ceremony-heavy rules like explicit return types and `require-await`, while keeping safety rules like `no-floating-promises` |
 | `configs.tooling` | Tooling and config entrypoints | Keeps strict behavior but turns off `import/no-default-export` for conventional config files |
 
-The strict preset also allows build-time injected constants that follow `^__[_A-Z0-9]+__$`, including declared globals and object-literal `define` maps.
+The strict preset also allows build-time injected constants that follow `^__[_A-Z0-9]+__$`, including declared globals and object-literal `define` maps. Object literal property keys that require quotes (hyphenated headers, digit-leading keys like `"4xx"`, etc.) are exempt from `naming-convention` format checks — enforcing camelCase on a name that cannot be an identifier is meaningless.
+
+`@typescript-eslint/prefer-readonly-parameter-types` is intentionally excluded from the strict preset. TypeScript's own `readonly` field enforcement already covers the meaningful cases; the rule's recursive type-checking generates noise against browser platform classes (`URL`, `Headers`, `Response`, etc.) without delivering proportional safety benefit. Teams that want this level of enforcement can opt in locally.
 
 ## What's Included
 

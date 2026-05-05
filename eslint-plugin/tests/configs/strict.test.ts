@@ -54,6 +54,11 @@ describe('strict config preset', () => {
       filter: { regex: '^__[_A-Z0-9]+__$', match: true },
       format: null,
     });
+    expect(namingConvention.slice(1)).toContainEqual({
+      selector: 'objectLiteralProperty',
+      modifiers: ['requiresQuotes'],
+      format: null,
+    });
   });
 
   it('configures import plugin rules', () => {
