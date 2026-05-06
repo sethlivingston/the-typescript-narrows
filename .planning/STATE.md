@@ -128,6 +128,7 @@ None yet.
 | 260317-j2m | Update add-opinion command with ESLint integration steps (5-6) | 2026-03-17 | 618210c | [260317-j2m-update-add-opinion-command-to-carry-opin](./quick/260317-j2m-update-add-opinion-command-to-carry-opin/) |
 | 260317-mtj | Replace fragile specific counts in consumer-facing .md files with approximate language | 2026-03-17 | dddb747 | [260317-mtj-replace-fragile-specific-counts-in-md-fi](./quick/260317-mtj-replace-fragile-specific-counts-in-md-fi/) |
 | 260317-r4a | Scope ESLint plugin npm package name to @sethlivingston | 2026-03-17 | 9b57bbd | [260317-r4a-scope-the-eslint-plugin-to-sethlivingsto](./quick/260317-r4a-scope-the-eslint-plugin-to-sethlivingsto/) |
+| 260505-t76 | Address GitHub issues #29-#33: add no-unsafe-type-assertion rule, fix strict config (consistent-type-assertions, naming-convention, no-unnecessary-condition, no-unused-vars) | 2026-05-05 | d1b6691 | [260505-t76-address-vetted-github-issues-add-no-unsa](./quick/260505-t76-address-vetted-github-issues-add-no-unsa/) |
 
 ## Session Continuity
 
