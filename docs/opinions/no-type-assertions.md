@@ -5,7 +5,7 @@ severity: bug-prevention
 enforcement: both
 confidence: strong
 tags: [type-safety, assertions]
-related: [no-explicit-any, use-type-narrowing]
+related: [no-unsafe-type-assertion, use-type-narrowing, no-explicit-any]
 lint:
   type: existing
   rule: "@typescript-eslint/consistent-type-assertions"
@@ -13,7 +13,7 @@ lint:
 
 ## Stance
 
-Do not use `as` type assertions unless narrowing is impossible and the assertion is provably safe.
+Do not use `as` type assertions unless narrowing is impossible and the assertion is provably safe. When an assertion is necessary, use the `as unknown as T` double-cast pattern — see [no-unsafe-type-assertion](no-unsafe-type-assertion.md).
 
 ## Why
 
