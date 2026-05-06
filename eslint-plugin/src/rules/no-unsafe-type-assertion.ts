@@ -24,14 +24,19 @@ export const noUnsafeTypeAssertion = createRule({
         // Allow: x as unknown
         if (typeAnnotation.type === 'TSUnknownKeyword') return;
 
+        // Allow: x as never  (exhaustiveness-check pattern: assertNever(x as never))
+        if (typeAnnotation.type === 'TSNeverKeyword') return;
+
         // Allow: x as const
+        // Note: in @typescript-eslint v8, `as const` parses as TSTypeReference{typeName:'const'},
+        // not TSTypeOperator — verified against the upstream isConst() helper.
         if (
           typeAnnotation.type === 'TSTypeReference' &&
           typeAnnotation.typeName.type === 'Identifier' &&
           typeAnnotation.typeName.name === 'const'
         ) return;
 
-        // Allow: (x as unknown) as T — the inner expression is a TSAsExpression whose type is TSUnknownKeyword
+        // Allow: (x as unknown) as T  (double-cast through unknown, with or without parens)
         if (
           node.expression.type === 'TSAsExpression' &&
           node.expression.typeAnnotation.type === 'TSUnknownKeyword'

@@ -49,10 +49,7 @@ export function createStrictConfig(plugin: ESLint.Plugin): Linter.Config[] {
         '@typescript-eslint/no-unnecessary-type-parameters': 'error',
         '@typescript-eslint/consistent-type-assertions': [
           'error',
-          {
-            assertionStyle: 'as',
-            objectLiteralTypeAssertions: 'never',
-          },
+          { assertionStyle: 'as' },
         ],
 
         // @typescript-eslint rules NOT in strict-type-checked (7, explicitly added)

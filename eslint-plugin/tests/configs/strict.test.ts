@@ -127,7 +127,7 @@ describe('strict config preset', () => {
     const cta = allRules['@typescript-eslint/consistent-type-assertions'] as [string, Record<string, unknown>];
     expect(cta[0]).toBe('error');
     expect(cta[1].assertionStyle).toBe('as');
-    expect(cta[1].objectLiteralTypeAssertions).toBe('never');
+    expect(cta[1].objectLiteralTypeAssertions).toBeUndefined();
   });
 
   it('configures no-unnecessary-condition with allowConstantLoopConditions (#32)', () => {

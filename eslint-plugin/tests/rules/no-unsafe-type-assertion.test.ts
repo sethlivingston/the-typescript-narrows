@@ -7,8 +7,10 @@ ruleTester.run('no-unsafe-type-assertion', noUnsafeTypeAssertion, {
   valid: [
     'const u = value as unknown;',
     'const b = (value as unknown) as BodyOpaque;',
+    'const b2 = value as unknown as BodyOpaque;',
     'const c = { x: 1 } as const;',
     'const d = [1, 2] as const;',
+    'const n = value as never;',
   ],
   invalid: [
     {
@@ -26,6 +28,13 @@ ruleTester.run('no-unsafe-type-assertion', noUnsafeTypeAssertion, {
     {
       code: 'const g = value as SomeClass;',
       errors: [{ messageId: 'unsafeAssertion' as const }],
+    },
+    {
+      code: 'const h = (value as Foo) as Bar;',
+      errors: [
+        { messageId: 'unsafeAssertion' as const },
+        { messageId: 'unsafeAssertion' as const },
+      ],
     },
   ],
 });
