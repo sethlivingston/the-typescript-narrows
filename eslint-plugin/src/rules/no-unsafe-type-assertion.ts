@@ -26,8 +26,9 @@ export const noUnsafeTypeAssertion = createRule({
 
         // Allow: x as const
         if (
-          typeAnnotation.type === 'TSTypeOperator' &&
-          typeAnnotation.operator === 'const'
+          typeAnnotation.type === 'TSTypeReference' &&
+          typeAnnotation.typeName.type === 'Identifier' &&
+          typeAnnotation.typeName.name === 'const'
         ) return;
 
         // Allow: (x as unknown) as T — the inner expression is a TSAsExpression whose type is TSUnknownKeyword

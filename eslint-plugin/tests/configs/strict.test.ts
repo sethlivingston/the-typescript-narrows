@@ -59,6 +59,13 @@ describe('strict config preset', () => {
       modifiers: ['requiresQuotes'],
       format: null,
     });
+
+    // #31 fix 1: classProperty with leadingUnderscore allow
+    expect(namingConvention.slice(1)).toContainEqual({
+      selector: 'classProperty',
+      format: ['camelCase'],
+      leadingUnderscore: 'allow',
+    });
   });
 
   it('configures import plugin rules', () => {
@@ -97,4 +104,68 @@ describe('strict config preset', () => {
     });
     expect(hasNarrowsPlugin).toBe(true);
   });
+
+  it('registers no-unsafe-type-assertion rule in plugin', () => {
+    expect(plugin.rules).toBeDefined();
+    expect((plugin.rules as Record<string, unknown>)['no-unsafe-type-assertion']).toBeDefined();
+  });
+
+  it('configures consistent-type-assertions with assertionStyle: as (#30)', () => {
+    const strict = (plugin.configs as Record<string, unknown>).strict as Array<Record<string, unknown>>;
+    const allRules: Record<string, unknown> = {};
+    for (const config of strict) {
+      if (config.rules) {
+        Object.assign(allRules, config.rules as Record<string, unknown>);
+      }
+    }
+
+    const cta = allRules['@typescript-eslint/consistent-type-assertions'] as [string, Record<string, unknown>];
+    expect(cta[0]).toBe('error');
+    expect(cta[1].assertionStyle).toBe('as');
+    expect(cta[1].objectLiteralTypeAssertions).toBe('never');
+  });
+
+  it('configures no-unnecessary-condition with allowConstantLoopConditions (#32)', () => {
+    const strict = (plugin.configs as Record<string, unknown>).strict as Array<Record<string, unknown>>;
+    const allRules: Record<string, unknown> = {};
+    for (const config of strict) {
+      if (config.rules) {
+        Object.assign(allRules, config.rules as Record<string, unknown>);
+      }
+    }
+
+    const nuc = allRules['@typescript-eslint/no-unnecessary-condition'] as [string, Record<string, unknown>];
+    expect(nuc[0]).toBe('error');
+    expect(nuc[1].allowConstantLoopConditions).toBe(true);
+  });
+
+  it('configures no-unused-vars with argsIgnorePattern (#33)', () => {
+    const strict = (plugin.configs as Record<string, unknown>).strict as Array<Record<string, unknown>>;
+    const allRules: Record<string, unknown> = {};
+    for (const config of strict) {
+      if (config.rules) {
+        Object.assign(allRules, config.rules as Record<string, unknown>);
+      }
+    }
+
+    const nuv = allRules['@typescript-eslint/no-unused-vars'] as [string, Record<string, unknown>];
+    expect(nuv[0]).toBe('error');
+    expect(nuv[1].argsIgnorePattern).toBe('^_');
+    expect(nuv[1].caughtErrorsIgnorePattern).toBe('^_');
+    expect(nuv[1].varsIgnorePattern).toBe('^_');
+    expect(nuv[1].ignoreRestSiblings).toBe(true);
+  });
+
+  it('enables no-unsafe-type-assertion in strict config (#29)', () => {
+    const strict = (plugin.configs as Record<string, unknown>).strict as Array<Record<string, unknown>>;
+    const allRules: Record<string, unknown> = {};
+    for (const config of strict) {
+      if (config.rules) {
+        Object.assign(allRules, config.rules as Record<string, unknown>);
+      }
+    }
+
+    expect(allRules['typescript-narrows/no-unsafe-type-assertion']).toBe('error');
+  });
 });
+

@@ -36,7 +36,10 @@ export function createStrictConfig(plugin: ESLint.Plugin): Linter.Config[] {
         '@typescript-eslint/no-namespace': 'error',
         '@typescript-eslint/switch-exhaustiveness-check': 'error',
         '@typescript-eslint/prefer-optional-chain': 'error',
-        '@typescript-eslint/no-unnecessary-condition': 'error',
+        '@typescript-eslint/no-unnecessary-condition': [
+          'error',
+          { allowConstantLoopConditions: true },
+        ],
         '@typescript-eslint/prefer-nullish-coalescing': 'error',
         '@typescript-eslint/no-floating-promises': 'error',
         '@typescript-eslint/no-misused-promises': 'error',
@@ -46,7 +49,10 @@ export function createStrictConfig(plugin: ESLint.Plugin): Linter.Config[] {
         '@typescript-eslint/no-unnecessary-type-parameters': 'error',
         '@typescript-eslint/consistent-type-assertions': [
           'error',
-          { assertionStyle: 'never' },
+          {
+            assertionStyle: 'as',
+            objectLiteralTypeAssertions: 'never',
+          },
         ],
 
         // @typescript-eslint rules NOT in strict-type-checked (7, explicitly added)
@@ -83,6 +89,11 @@ export function createStrictConfig(plugin: ESLint.Plugin): Linter.Config[] {
             format: ['camelCase'],
             leadingUnderscore: 'allow',
           },
+          {
+            selector: 'classProperty',
+            format: ['camelCase'],
+            leadingUnderscore: 'allow',
+          },
           { selector: 'typeLike', format: ['PascalCase'] },
           { selector: 'enumMember', format: ['PascalCase'] },
           {
@@ -97,9 +108,22 @@ export function createStrictConfig(plugin: ESLint.Plugin): Linter.Config[] {
           },
         ],
 
-        // typescript-narrows custom rules (2)
+        // typescript-narrows custom rules (3)
         'typescript-narrows/ban-enums': 'error',
         'typescript-narrows/ban-barrel-files': 'error',
+        'typescript-narrows/no-unsafe-type-assertion': 'error',
+
+        // @typescript-eslint/no-unused-vars explicit options
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          {
+            args: 'all',
+            argsIgnorePattern: '^_',
+            caughtErrorsIgnorePattern: '^_',
+            varsIgnorePattern: '^_',
+            ignoreRestSiblings: true,
+          },
+        ],
       },
     },
   ];
