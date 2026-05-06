@@ -83,7 +83,7 @@ export function createStrictConfig(plugin: ESLint.Plugin): Linter.Config[] {
             format: null,
           },
           { selector: 'default', format: ['camelCase'] },
-          { selector: 'variable', format: ['camelCase', 'UPPER_CASE'] },
+          { selector: 'variable', format: ['camelCase', 'UPPER_CASE', 'PascalCase'] },
           {
             selector: 'parameter',
             format: ['camelCase'],

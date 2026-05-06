@@ -66,6 +66,11 @@ describe('strict config preset', () => {
       format: ['camelCase'],
       leadingUnderscore: 'allow',
     });
+    // #31 fix 2: PascalCase allowed for variables
+    expect(namingConvention.slice(1)).toContainEqual({
+      selector: 'variable',
+      format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
+    });
   });
 
   it('configures import plugin rules', () => {
