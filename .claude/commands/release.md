@@ -11,7 +11,7 @@ The user provides `$ARGUMENTS` which should specify what to release. Examples:
 
 ### For the ESLint plugin (`eslint-plugin/v*` tags):
 
-1. Update `eslint-plugin/package.json` version field to the new version
+1. Run `cd eslint-plugin && npm version {version} --no-git-tag-version --allow-same-version` to update both `package.json` and `package-lock.json`
 2. Run `cd eslint-plugin && npm run build && npm test && npm run typecheck` to verify everything passes
 3. Commit on a branch: `chore(eslint-plugin): bump version to {version}`
 4. Open and merge a PR so the version bump lands on protected `main`
