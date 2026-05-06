@@ -9,6 +9,7 @@ Severity: B = bug-prevention, M = maintenance, S = style | Enforcement: both, sk
 - [no-explicit-any](no-explicit-any.md) -- Never use explicit `any` [B] [both]
 - [prefer-unknown](prefer-unknown.md) -- Use `unknown` for values of uncertain type [B] [both]
 - [no-type-assertions](no-type-assertions.md) -- Restrict type assertions to proven-safe patterns [B] [both]
+- [no-unsafe-type-assertion](no-unsafe-type-assertion.md) -- Permit only safe type assertion patterns [B] [both]
 - [no-non-null-assertion](no-non-null-assertion.md) -- Do not use the `!` postfix operator [B] [both]
 - [strict-boolean-expressions](strict-boolean-expressions.md) -- Require explicit boolean comparisons [B] [both]
 - [use-unknown-in-catch](use-unknown-in-catch.md) -- Type catch clause variables as `unknown` [B] [both]

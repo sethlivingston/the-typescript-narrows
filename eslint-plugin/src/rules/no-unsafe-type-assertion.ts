@@ -5,7 +5,7 @@ export const noUnsafeTypeAssertion = createRule({
   meta: {
     type: 'problem',
     docs: {
-      description: 'Permit only as-unknown and double-cast-through-unknown type assertion patterns',
+      description: 'Permit only safe type assertion patterns: as unknown, (x as unknown) as T, as const, and as never',
       opinionId: 'no-unsafe-type-assertion',
       recommended: true,
       requiresTypeChecking: false,

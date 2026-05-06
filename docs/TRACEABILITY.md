@@ -1,6 +1,6 @@
 # Traceability Matrix
 
-Generated: 2026-03-20 | Opinions: 59 | Covered: 35 | Skill-only: 24 | Gaps: 0
+Generated: 2026-05-06 | Opinions: 60 | Covered: 35 | Skill-only: 24 | Gaps: 1
 
 ## Coverage
 
@@ -38,6 +38,7 @@ Generated: 2026-03-20 | Opinions: 59 | Covered: 35 | Skill-only: 24 | Gaps: 0
 | no-unnecessary-condition | Do not write conditions that are always true or false | B | both | null-handling.md | @typescript-eslint/no-unnecessary-condition | covered |
 | no-unnecessary-generics | Do not add type parameters used only once | M | both | generics.md | @typescript-eslint/no-unnecessary-type-parameters | covered |
 | no-unsafe-return | Do not return unsafe any-typed values | B | both | type-safety.md | @typescript-eslint/no-unsafe-return | covered |
+| no-unsafe-type-assertion | Permit only safe type assertion patterns | B | both | type-safety.md | typescript-narrows/no-unsafe-type-assertion | covered |
 | no-var | Never use var | S | both | immutability.md | no-var | covered |
 | prefer-arrow-functions | Use arrow functions by default | S | skill-only | functions.md | -- | skill-only |
 | prefer-async-await | Use async/await over .then() chains | M | skill-only | async-promises.md | -- | skill-only |
@@ -49,7 +50,7 @@ Generated: 2026-03-20 | Opinions: 59 | Covered: 35 | Skill-only: 24 | Gaps: 0
 | prefer-nullish-coalescing | Use ?? instead of || for nullish fallbacks | B | both | null-handling.md | @typescript-eslint/prefer-nullish-coalescing | covered |
 | prefer-optional-chaining | Use optional chaining over manual null checks | S | both | null-handling.md | @typescript-eslint/prefer-optional-chain | covered |
 | prefer-readonly | Mark class properties readonly when not reassigned | M | both | immutability.md | @typescript-eslint/prefer-readonly | covered |
-| prefer-readonly-params | Use Readonly<T> and ReadonlyArray<T> in function params | M | both | immutability.md | @typescript-eslint/prefer-readonly-parameter-types | covered |
+| prefer-readonly-params | Use Readonly<T> and ReadonlyArray<T> in function params | M | both | immutability.md | @typescript-eslint/prefer-readonly-parameter-types | gap |
 | prefer-undefined | Prefer undefined over null | S | skill-only | null-handling.md | -- | skill-only |
 | prefer-unknown | Use unknown for values of uncertain type | B | both | type-safety.md | @typescript-eslint/no-unsafe-assignment | covered |
 | prefer-using-declarations | Use `using` declarations to tie resource lifetimes to scope | B | skill-only | resource-management.md | -- | skill-only |
@@ -68,4 +69,6 @@ Generated: 2026-03-20 | Opinions: 59 | Covered: 35 | Skill-only: 24 | Gaps: 0
 
 ## Gaps
 
-(none)
+| Opinion ID | Title | Enforcement | Issue |
+|------------|-------|-------------|-------|
+| prefer-readonly-params | Use Readonly<T> and ReadonlyArray<T> in function params | both | lint rule not in strict config |
