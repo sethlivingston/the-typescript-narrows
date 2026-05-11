@@ -51,6 +51,13 @@ export function createStrictConfig(plugin: ESLint.Plugin): Linter.Config[] {
           'error',
           { assertionStyle: 'as' },
         ],
+        // Disabled: no-unsafe-type-assertion is a strict syntactic superset.
+        // It only permits `as unknown`, `(x as unknown) as T`, `as const`, and
+        // `as never`. When the source is already typed `unknown`, the required
+        // double-cast `(x as unknown) as T` would trigger this rule because the
+        // inner `as unknown` is "unnecessary". Disabling here ensures the two
+        // rules don't create an inescapable conflict.
+        '@typescript-eslint/no-unnecessary-type-assertion': 'off',
 
         // @typescript-eslint rules NOT in strict-type-checked (7, explicitly added)
         '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
