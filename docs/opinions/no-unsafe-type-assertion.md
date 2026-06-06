@@ -74,4 +74,4 @@ const typed = (value as Foo) as Bar;
 
 The `strict` preset disables `@typescript-eslint/no-unnecessary-type-assertion`. The reason is a direct conflict: when a variable is already typed `unknown`, the required double-cast pattern `(x as unknown) as T` would trigger that rule on the inner `as unknown`, which it considers redundant. Keeping both rules active makes the double-cast pattern impossible to write without a per-line suppression comment.
 
-Disabling `no-unnecessary-type-assertion` is safe because `typescript-narrows/no-unsafe-type-assertion` is a strict syntactic superset: it catches every dangerous assertion that `no-unnecessary-type-assertion` would catch, plus more. No safety coverage is lost.
+Disabling `@typescript-eslint/no-unnecessary-type-assertion` loses redundancy detection (e.g. flagging `x as unknown` when `x` is already typed `unknown`), but no safety coverage is lost. `@typescript-eslint/no-unnecessary-type-assertion` is primarily a style/redundancy rule; the dangerous-assertion coverage it incidentally provides is fully handled by `typescript-narrows/no-unsafe-type-assertion`.
