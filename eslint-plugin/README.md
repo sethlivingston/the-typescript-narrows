@@ -64,8 +64,8 @@ This plugin pairs with [The TypeScript Narrows Claude Plugin](../plugin/the-type
 
 The ESLint plugin package uses automated release workflows. To publish a release, you must:
 
-1. Have a PR that bumps `version` in `eslint-plugin/package.json` merged to `main`
-2. Have permission to push tags to the repository
+1. Bump `version` in `eslint-plugin/package.json` on `main`
+2. Have permission to push to the repository
 3. Have the `npm-publish` GitHub environment configured with:
    - Trusted publishing enabled (OIDC with npm)
    - Appropriate npm permissions for `@sethlivingston/eslint-plugin-typescript-narrows`
@@ -77,8 +77,8 @@ The release is triggered by pushing a git tag with the format `eslint-plugin/v{V
 **To release a new version:**
 
 1. Update `eslint-plugin/package.json` with the new version (e.g., `"version": "1.2.0"`)
-2. Commit the version bump on a branch, open a PR, and merge it to `main`
-3. From the merged commit on `main`, create and push a tag: `git tag eslint-plugin/v1.2.0 && git push origin eslint-plugin/v1.2.0`
+2. Commit the version bump to `main` and push
+3. Create and push a tag: `git tag eslint-plugin/v1.2.0 && git push origin eslint-plugin/v1.2.0`
 
 ### Workflows
 

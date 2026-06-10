@@ -13,10 +13,8 @@ The user provides `$ARGUMENTS` which should specify what to release. Examples:
 
 1. Run `cd eslint-plugin && npm version {version} --no-git-tag-version --allow-same-version` to update both `package.json` and `package-lock.json`
 2. Run `cd eslint-plugin && npm run build && npm test && npm run typecheck` to verify everything passes
-3. Commit on a branch: `chore(eslint-plugin): bump version to {version}`
-4. Open and merge a PR so the version bump lands on protected `main`
-5. Fast-forward local `main` to the merged commit
-6. Tag from `main`: `git tag eslint-plugin/v{version}`
+3. Commit directly on `main`: `chore(eslint-plugin): bump version to {version}`
+4. Tag the commit: `git tag eslint-plugin/v{version}`
 
 ### For the plugin (`plugin/v*` tags):
 
@@ -26,7 +24,7 @@ The user provides `$ARGUMENTS` which should specify what to release. Examples:
 
 ### After tagging:
 
-1. Push only the tag(s): `git push origin refs/tags/eslint-plugin/v{version}` and/or `git push origin refs/tags/plugin/v{version}`
+1. Push `main` (if it has the version-bump commit) and the tag(s): `git push origin main refs/tags/eslint-plugin/v{version}` and/or `git push origin refs/tags/plugin/v{version}`
 2. Report what was released and remind the user:
    - For eslint-plugin: The GitHub Action will run tests, publish to npm, and create a GitHub Release
    - For plugin: The GitHub Action will create a GitHub Release

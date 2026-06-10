@@ -44,13 +44,13 @@ Use the `/release` slash command. Artifacts are versioned and released independe
 /release eslint-plugin 1.1.0 plugin 1.1.0  # release both
 ```
 
-**Protected-main release flow:** do not push release commits directly to `main`. For `eslint-plugin` releases, bump `eslint-plugin/package.json` on a branch, validate it, open and merge the PR, then fast-forward local `main` and push only the release tag(s). For `plugin`-only releases, tag the desired commit already on `main`.
+**Release flow:** commit the `eslint-plugin/package.json` version bump directly on `main` (solo repo — no PR ceremony), validate, then push `main` and the release tag(s). For `plugin`-only releases, tag the desired commit already on `main`.
 
 **Tag convention:** `eslint-plugin/v{semver}` and `plugin/v{semver}`. Pushing a tag triggers the matching GitHub Actions workflow in `.github/workflows/`.
 
 **npm publishing** uses npm trusted publishing via GitHub Actions OIDC. Configure the npm package to trust this repository's release workflow before publishing; no long-lived `NPM_TOKEN` repository secret should be required.
 
-**Release hardening:** Protect the `main` branch and the `eslint-plugin/v*` and `plugin/v*` tag namespaces. Configure the `npm-publish` GitHub Environment with required reviewers before automated npm publishing, and keep GitHub Actions pinned by full commit SHA.
+**Release hardening:** GitHub rulesets block deletion and force-push on `main` and the `eslint-plugin/v*` / `plugin/v*` tag namespaces — nothing more (solo repo; review gates add friction, not security). Publishing safety lives in the release workflow itself: OIDC trusted publishing with provenance, `--ignore-scripts`, validation before publish, the `npm-publish` environment scoped to release tags, and Actions pinned by full commit SHA.
 
 ## Traceability
 
