@@ -48,6 +48,8 @@ Use the `/release` slash command. Artifacts are versioned and released independe
 
 **Tag convention:** `eslint-plugin/v{semver}` and `plugin/v{semver}`. Pushing a tag triggers the matching GitHub Actions workflow in `.github/workflows/`.
 
+**If a release fails after the tag is pushed:** prefer fixing the problem and cutting the next patch version over moving the tag — the tag ruleset blocks tag moves by design. Nothing publishes from a failed run, so an abandoned tag is harmless.
+
 **npm publishing** uses npm trusted publishing via GitHub Actions OIDC. Configure the npm package to trust this repository's release workflow before publishing; no long-lived `NPM_TOKEN` repository secret should be required.
 
 **Release hardening:** GitHub rulesets block deletion and force-push on `main` and the `eslint-plugin/v*` / `plugin/v*` tag namespaces — nothing more (solo repo; review gates add friction, not security). Publishing safety lives in the release workflow itself: OIDC trusted publishing with provenance, `--ignore-scripts`, validation before publish, the `npm-publish` environment scoped to release tags, and Actions pinned by full commit SHA.
